@@ -8,11 +8,11 @@ package Controllers;//
 //  @ Author : 
 //
 //
-
 import Models.Usuario;
 import System.SistemaCentral;
 import Views.VistaUsuario;
-
+import servidor.Autenticacion;
+import servidor.ObtencionDeRol;
 import java.util.HashMap;
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class ControladorUsuario {
 		//if ()
 	}
 	
-	public void requestDarAlta(Usuario usr) {
+	public void requestDarAlta() {
 		vista.renderNewUsuario();
 	}
 	
@@ -52,7 +52,11 @@ public class ControladorUsuario {
 	}
 	
 	public void verUsuario(String correo) {
-		buscarUsuario(correo).toString();
+		Autenticacion auth = new Autenticacion();
+		ObtencionDeRol rol = new ObtencionDeRol();
+		if (!auth.existeCuentaUPM(correo)) {
+			vista.renderError("El correo no existe");
+		}
 	}
 	
 	public void requestVerUsuario() {

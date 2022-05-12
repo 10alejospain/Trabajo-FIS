@@ -84,6 +84,9 @@ public class VistaUsuario {
 		Scanner scanner = new Scanner(System.in);
 		System.out.printf("¿Que usuario desea ver? Introduzca su correo: ");
 		String correo = scanner.nextLine();
-
+		Controlador.verUsuario(correo);
+	}
+	public void renderError(String error){
+		System.out.printf(error);
 	}
 }
