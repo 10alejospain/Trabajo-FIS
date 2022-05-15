@@ -6,6 +6,13 @@ public class PDI extends Usuario implements IPDI{
   private String categoria;
   private String horarioTrabajo;
 
+    public PDI(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, int codigoTrabajador, String categoria, String horarioTrabajo) {
+        super(nombre,primerApellido,segundoApellido,correo,contraseña,dni);
+        this.codigoTrabajador = codigoTrabajador;
+        this.categoria = categoria;
+        this.horarioTrabajo = horarioTrabajo;
+    }
+
     public int getCodigoTrabajador() {
         return codigoTrabajador;
     }

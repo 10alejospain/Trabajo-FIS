@@ -8,31 +8,94 @@ package Controllers;//
 //  @ Author : 
 //
 //
+import Models.Alumno;
+import Models.PAS;
+import Models.PDI;
 import Models.Usuario;
 import System.SistemaCentral;
 import Views.VistaUsuario;
 import servidor.Autenticacion;
 import servidor.ObtencionDeRol;
+import servidor.UPMUsers;
+import utilidades.Cifrado;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
 public class ControladorUsuario {
-	private List<Usuario> usuarios;
+
 	private SistemaCentral sistemaU;
-	private VistaUsuario vista;
+	final VistaUsuario vista;
+
+	private List<Usuario> usuarios;//Usuarios registrados
+	private Usuario loggedUser;//Usuario loggeado
 
 	public ControladorUsuario(){
 		vista = new VistaUsuario(this);
 	}
 	public void darAlta(HashMap<String, String> map) {
+		Autenticacion auth = new Autenticacion();
 		String correo = map.get("correo");
+		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
 
-		//if ()
+		if (auth.existeCuentaUPM(correo)){
+			if (rol == "ALUMNO"){
+				Alumno alumno = new Alumno(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						null
+				);
+
+				usuarios.add(alumno);
+				vista.renderAlumno(alumno);
+			}
+			else if (rol == "PAS"){
+				PAS pas = new PAS(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						0,
+						0
+				);
+
+				usuarios.add(pas);
+				vista.renderPAS(pas);
+			}
+			else { //PDI
+				PDI pdi = new PDI(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						0,
+						null,
+						null
+				);
+
+				usuarios.add(pdi);
+				vista.renderPDI(pdi);
+			}
+		}
+		else {
+			vista.renderError("El correo proporcionado no existe en la BD de la UPM");
+		}
+
+
 	}
 	
 	public void requestDarAlta() {
-		vista.renderNewUsuario();
+		vista.renderNewUsuario();// Pide al controlador que invoque la vista para crear un nuevo usr
 	}
 	
 	public void eliminarUsuario(String correo) {
@@ -60,7 +123,7 @@ public class ControladorUsuario {
 	}
 	
 	public void requestVerUsuario() {
-
+		vista.renderNewUsuario();
 	}
 	
 	public Usuario buscarUsuario(String correo) {
@@ -76,6 +139,8 @@ public class ControladorUsuario {
 	}
 
 	public void logout(){
-
+		if(loggedUser != null){
+			loggedUser = null;
+		}
 	}
 }
