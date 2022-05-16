@@ -11,18 +11,25 @@ package Views;//
 
 import System.*;
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 
 public class VistaSistema {
-	private SistemaCentral Sistema;
-
+	private SistemaCentral sistemaCentral;
+	private Scanner scanner = new Scanner(System.in);
 	public VistaSistema(SistemaCentral sistema) {
-		Sistema = sistema;
+		sistemaCentral = sistema;
 	}
 
 	public String renderPaginaPrincipal() {
 		System.out.println("Menu de Acciones: ");
 		System.out.print("1.- Añadir usuario.\n2.- Añadir aula.\n3.- Suscribir a un aula.");
-
+		switch (scanner.nextLine()){
+			case "1":
+				sistemaCentral.procesarPeticion("https://myupmclassroom/users/new", new HashMap<>());
+				break;
+		}
 		return null;
 	}
 	
