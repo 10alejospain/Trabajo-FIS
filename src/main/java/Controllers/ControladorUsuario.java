@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
+//El controlador del usuario necesita la funcionalidad de suscribirse y des-suscribirse a un aula.
 public class ControladorUsuario {
 
 	private SistemaCentral sistemaU;
@@ -109,7 +109,8 @@ public class ControladorUsuario {
 	public void requestEliminarUsuario() {
 		vista.renderUpdateUsuario();
 	}
-	
+
+	//Aunque no se use, he metido esto, por si acaso.
 	public void update(String correo, HashMap<String , String > map) {
 		usuarios.forEach((x) -> {
 			if(x.getCorreo().equals(correo)){

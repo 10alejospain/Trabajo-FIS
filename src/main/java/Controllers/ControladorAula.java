@@ -17,7 +17,6 @@ import Views.*;
 
 import java.util.*;
 
-
 public class ControladorAula {
 
 	private SistemaCentral sistemaCentral;
@@ -36,7 +35,8 @@ public class ControladorAula {
 		);
 		aulas.add(aula);
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void borrarAula(int id) {
 		aulas.forEach((x) -> {
 			if(x.getId() == id) {
@@ -44,7 +44,8 @@ public class ControladorAula {
 			}
 		});
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void update(int id, HashMap<String , String> map) {
 		aulas.forEach((x) -> {
 			if(x.getId() == id){
@@ -56,7 +57,8 @@ public class ControladorAula {
 			}
 		});
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void verAula(int id) {
 		for (Aula x : aulas) {
 			if (x.getId() == id) {
@@ -67,7 +69,7 @@ public class ControladorAula {
 	}
 	
 	public void requestVerAula() {
-		//Seleccion del aula que quiere ver
+		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
 		Aula aulaSeleccionada = new Aula(0, "", 0, 0.0, 0, "");
 		Scanner s = new Scanner(System.in);
 		int attemps = 3;

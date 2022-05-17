@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Vista sistema central &gt; usuario">
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Añadir Aula y Ver aula funcionalidad completada.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Aula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Aula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <updated>1652391472653</updated>
       <workItem from="1652391473860" duration="130000" />
       <workItem from="1652732981429" duration="1283000" />
-      <workItem from="1652808433339" duration="6284000" />
+      <workItem from="1652808433339" duration="6553000" />
     </task>
     <task id="LOCAL-00001" summary="Vista sistema central &gt; usuario">
       <created>1652733860001</created>
@@ -84,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652733860001</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Añadir Aula y Ver aula funcionalidad completada.">
+      <created>1652814895008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652814895008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Vista sistema central &gt; usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vista sistema central &gt; usuario" />
+    <MESSAGE value="Añadir Aula y Ver aula funcionalidad completada." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir Aula y Ver aula funcionalidad completada." />
   </component>
 </project>
