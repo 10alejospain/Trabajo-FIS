@@ -9,8 +9,8 @@ import java.util.HashMap;
 
 public class SistemaCentral implements ISistemaCentral{
 
-	private ControladorUsuario ControladorU = new ControladorUsuario();
-	private ControladorAula ControladorA;
+	private ControladorUsuario controladorUsuario = new ControladorUsuario();
+	private ControladorAula controladorAula = new ControladorAula();
 	private VistaSistema VistaSistema;
 	public SistemaCentral() {
 	
@@ -23,7 +23,13 @@ public class SistemaCentral implements ISistemaCentral{
 	public String procesarPeticion(String url, HashMap<String , String> map) {
 		switch (url){
 			case "https://myupmclassroom/users/new":
-				ControladorU.requestDarAlta();
+				controladorUsuario.requestDarAlta();
+				break;
+			case "https://myupmclassroom/aulas":
+				controladorAula.requestCrearAula();
+				break;
+			case "https://myupmclassroom/aulas/views":
+				controladorAula.requestVerAula();
 				break;
 		}
 		return null;

@@ -11,7 +11,7 @@ public class Aula implements IAula {
   private String tipo;
 
 
-  public Aula(int id, String centro, int nuermoCentro, Double superficie, int aforo, String tipo) {
+  public Aula(int id, String centro, int numeroCentro, Double superficie, int aforo, String tipo) {
     this.id = id;
     this.centro = centro;
     this.numeroCentro = numeroCentro;

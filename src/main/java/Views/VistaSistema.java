@@ -23,12 +23,33 @@ public class VistaSistema {
 	}
 
 	public String renderPaginaPrincipal() {
-		System.out.println("Menu de Acciones: ");
-		System.out.print("1.- Añadir usuario.\n2.- Añadir aula.\n3.- Suscribir a un aula.");
-		switch (scanner.nextLine()){
-			case "1":
-				sistemaCentral.procesarPeticion("https://myupmclassroom/users/new", new HashMap<>());
-				break;
+		boolean exit = false;
+
+		while(!exit) {
+			System.out.println("\n************************************************************" +
+					           "\n******************** My UPM Classroom **********************" +
+					           "\n************************************************************" +
+					           "\nMenu de Acciones: ");
+			System.out.print("1.- Anadir usuario.\n2.- Anadir aula.\n3.- Ver Aula.\n4.- Suscribir a un aula.\n0.- EXIT.\n");
+			switch (scanner.nextLine()) {
+				case "0":
+					exit = true;
+					break;
+				case "1":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users", new HashMap<>());
+					break;
+				case "2":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas", new HashMap<>());
+					break;
+				case "3":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/views", new HashMap<>());
+					break;
+				case "4":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/aulas/", new HashMap<>());
+					break;
+				default:
+					System.out.println("\nPor favor, seleccione una de las opciones.\n");
+			}
 		}
 		return null;
 	}

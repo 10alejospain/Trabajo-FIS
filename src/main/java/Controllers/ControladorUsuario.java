@@ -29,7 +29,7 @@ public class ControladorUsuario {
 	private SistemaCentral sistemaU;
 	final VistaUsuario vista;
 
-	private List<Usuario> usuarios;//Usuarios registrados
+	private List<Usuario> usuarios = new ArrayList<Usuario>();//Usuarios registrados
 	private Usuario loggedUser;//Usuario loggeado
 
 	public ControladorUsuario(){
@@ -99,7 +99,11 @@ public class ControladorUsuario {
 	}
 	
 	public void eliminarUsuario(String correo) {
-
+		usuarios.forEach((x) -> {
+			if (x.getCorreo().equals(correo)) {
+				usuarios.remove(x);
+			}
+		});
 	}
 	
 	public void requestEliminarUsuario() {
@@ -107,7 +111,16 @@ public class ControladorUsuario {
 	}
 	
 	public void update(String correo, HashMap<String , String > map) {
-
+		usuarios.forEach((x) -> {
+			if(x.getCorreo().equals(correo)){
+				x.setCorreo(map.get("correo") != null ? map.get("correo") : x.getCorreo());
+				x.setContraseña(map.get("contraseña") != null ? map.get("contraseña") : x.getContraseña());
+				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDni());
+				x.setNombre(map.get("nombre") != null ? map.get("nombre") : x.getNombre());
+				x.setPrimerApellido(map.get("primer apellido") != null ? map.get("primer apellido") : x.getPrimerApellido());
+				x.setSegundoApellido(map.get("segundo apellido") != null ? map.get("segundo apellido") : x.getPrimerApellido());
+			}
+		});
 	}
 	
 	public void requestUpdate() {
@@ -127,7 +140,7 @@ public class ControladorUsuario {
 	}
 	
 	public Usuario buscarUsuario(String correo) {
-		for(int x=0; x<usuarios.size(); x++){
+		for (int x = 0; x < usuarios.size(); x++) {
 			if(usuarios.get(x).getCorreo() == correo){
 				return usuarios.get(x);
 			}

@@ -12,20 +12,42 @@ package Views;//
 import Controllers.ControladorAula;
 import Interfaces.*;
 
+import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.Scanner;
 
 
 public class VistaAula {
-	private ControladorAula ControladorA;
+	private ControladorAula controladorAula;
 	public VistaAula( ControladorAula controladorA) {
-		this.ControladorA = controladorA;
+		this.controladorAula = controladorA;
 	}
 	
 	public String renderAula(IAula aula) {
-		return null;
+		return "************************************************************" +
+				"\nVISTA AULA " + aula.getId() +
+				"\nCentro: " + aula.getCentro() +
+				"\nNumero del Centro: " + aula.getNumero_Centro() +
+				"\nSuperficie del aula: " + aula.getSuperficie() + " m2" +
+				"\nAforo del aula: " + aula.getAforo() + " personas" +
+				"\nTipo de aula: " + aula.getTipo()+
+				"\n************************************************************";
 	}
 
-	public void renderNewAula(HashMap<String, String > params){
-
+	public void renderNewAula(){
+		Scanner scanner = new Scanner(System.in);
+		PrintStream j = System.out;
+		HashMap<String,String> datos = new HashMap<>();
+		j.print("Centro del aula: ");
+		datos.put("centro", scanner.nextLine());
+		j.print("Numero del centro: ");
+		datos.put("numeroCentro", scanner.nextLine());
+		j.print("Superficie del aula (en m2): ");
+		datos.put("superficie", scanner.nextLine());
+		j.print("Aforo maximo del aula: ");
+		datos.put("aforo", scanner.nextLine());
+		j.print("Tipo de aula: ");
+		datos.put("tipo", scanner.nextLine());
+		controladorAula.crearAula(datos);
 	}
 }
