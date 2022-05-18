@@ -13,11 +13,11 @@ package Interfaces;//
 
 
 public interface IAula {
-	public int getId();
+	public String getId();
 	
 	public String getCentro();
 	
-	public Integer getNumero_Centro();
+	public int getNumero_Centro();
 	
 	public int getAforo();
 	public String getTipo();

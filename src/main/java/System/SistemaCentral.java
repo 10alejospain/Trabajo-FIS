@@ -25,11 +25,26 @@ public class SistemaCentral implements ISistemaCentral{
 			case "https://myupmclassroom/users/new":
 				controladorUsuario.requestDarAlta();
 				break;
-			case "https://myupmclassroom/aulas":
+			case "https://myupmclassroom/aulas/new":
 				controladorAula.requestCrearAula();
 				break;
 			case "https://myupmclassroom/aulas/views":
 				controladorAula.requestVerAula();
+				break;
+			case "https://myupmclassroom/aulas/update":
+				controladorAula.requestUpdate();
+				break;
+			case "https://myupmclassroom/users/update":
+				controladorUsuario.requestUpdate();
+				break;
+			case "https://myupmclassroom/aulas/delete":
+				controladorAula.requestBorrarAula();
+				break;
+			case "https://myupmclassroom/users/delete":
+				controladorUsuario.requestEliminarUsuario();
+				break;
+			case "https://myupmclassroom/users/views":
+				controladorUsuario.requestVerUsuario();
 				break;
 		}
 		return null;
