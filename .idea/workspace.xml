@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Añadir Aula y Ver aula funcionalidad completada.">
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Comentarios añadidos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,8 @@
       <updated>1652391472653</updated>
       <workItem from="1652391473860" duration="130000" />
       <workItem from="1652732981429" duration="1283000" />
-      <workItem from="1652808433339" duration="6553000" />
+      <workItem from="1652808433339" duration="6651000" />
+      <workItem from="1652816464802" duration="1242000" />
     </task>
     <task id="LOCAL-00001" summary="Vista sistema central &gt; usuario">
       <created>1652733860001</created>
@@ -87,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652814895008</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Comentarios añadidos.">
+      <created>1652815112566</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652815112566</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +114,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Vista sistema central &gt; usuario" />
     <MESSAGE value="Añadir Aula y Ver aula funcionalidad completada." />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir Aula y Ver aula funcionalidad completada." />
+    <MESSAGE value="Comentarios añadidos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios añadidos." />
   </component>
 </project>
