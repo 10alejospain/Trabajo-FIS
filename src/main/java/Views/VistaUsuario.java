@@ -41,13 +41,13 @@ public class VistaUsuario {
 	public void renderUsuario(IUsuario usuario){
 		String rol = ObtencionDeRol.get_UPM_AccountRol(usuario.getCorreo()).toString();
 		if (rol == "ALUMNO"){
-			renderAlumno();
+			renderAlumno((IAlumno) usuario);
 		}
 		else if (rol == "PAS"){
-			renderPAS();
+			renderPAS((IPAS) usuario);
 		}
 		else { //PDI
-			renderPDI();
+			renderPDI((IPDI) usuario);
 		}
 	}
 	public void renderNewUsuario(){
@@ -60,11 +60,29 @@ public class VistaUsuario {
 		System.out.printf("\nIntroduce tu segundo apellido: ");
 		datos.put("segundo apellido",scanner.nextLine());
 		System.out.printf("\nIntroduce tu correo: ");
-		datos.put("correo",scanner.nextLine());
+		String correo = scanner.nextLine();
+		datos.put("correo",correo);
 		System.out.printf("\nIntroduce tu constraseña: ");
 		datos.put("contraseña",scanner.nextLine());
-		System.out.printf("\nIntroduce tu dni: ");
+		System.out.printf("\nIntroduzca su dni: ");
 		datos.put("dni",scanner.nextLine());
+		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
+		if (rol == "ALUMNO"){
+			System.out.printf("\nIntroduzca tu numero de matricula");
+			datos.put("matricula",scanner.nextLine());
+		}
+		else if (rol == "PAS"){
+			System.out.printf("\nIntroduzca su codigo personal: ");
+			datos.put("codigo personal",scanner.nextLine());
+			System.out.printf("\nIntroduzca su año de incorporacion: ");
+			datos.put("anio",scanner.nextLine());
+		}
+		else { //PDI
+			System.out.printf("\n Introduzca su codigo de trabajador: ");
+			datos.put("codigo",scanner.nextLine());
+			System.out.printf("\n Introduzaca su categoria: ");
+			datos.put("categoria",scanner.nextLine());
+		}
 		Controlador.darAlta(datos);
 	}
 

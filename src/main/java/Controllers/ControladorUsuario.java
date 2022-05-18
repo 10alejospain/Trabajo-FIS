@@ -8,6 +8,7 @@ package Controllers;//
 //  @ Author : 
 //
 //
+import Interfaces.IAlumno;
 import Models.Alumno;
 import Models.PAS;
 import Models.PDI;
@@ -49,11 +50,11 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						null
+						map.get("matricula")
 				);
 
 				usuarios.add(alumno);
-				vista.renderAlumno(alumno);
+				vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
@@ -63,8 +64,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						0,
-						0
+						Integer.parseInt(map.get("codigo personal")),
+						Integer.parseInt(map.get("anio"))
 				);
 
 				usuarios.add(pas);
@@ -78,8 +79,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						0,
-						null,
+						Integer.parseInt(map.get("Codigo")),
+						map.get("categoria"),
 						null
 				);
 
@@ -107,7 +108,7 @@ public class ControladorUsuario {
 	}
 	
 	public void requestEliminarUsuario() {
-		vista.renderUpdateUsuario();
+		vista.renderEliminarUsuario();
 	}
 
 	//Aunque no se use, he metido esto, por si acaso.
@@ -150,6 +151,8 @@ public class ControladorUsuario {
 		}
 		return null;
 	}
+
+
 	public void login(String correo){
 
 	}
