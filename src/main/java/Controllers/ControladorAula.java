@@ -24,9 +24,8 @@ public class ControladorAula {
 	private List<Aula> aulas = new ArrayList<Aula>();
 	public void crearAula(HashMap<String , String> map) {
 		Random random = new Random();
-		int id = random.nextInt( 9999);
 		Aula aula = new Aula(
-				id,
+				map.get("id"),
 				map.get("centro"),
 				Integer.parseInt(map.get("numeroCentro")),
 				Double.parseDouble(map.get("superficie")),
@@ -37,7 +36,7 @@ public class ControladorAula {
 	}
 
 	//Parametro cambiado, dado a que el id es un int no un string.
-	public void borrarAula(int id) {
+	public void borrarAula(String id) {
 		aulas.forEach((x) -> {
 			if(x.getId() == id) {
 				aulas.remove(x);
@@ -46,7 +45,7 @@ public class ControladorAula {
 	}
 
 	//Parametro cambiado, dado a que el id es un int no un string.
-	public void update(int id, HashMap<String , String> map) {
+	public void update(String id, HashMap<String , String> map) {
 		aulas.forEach((x) -> {
 			if(x.getId() == id){
 				x.setCentro(map.get("centro") != null ? map.get("centro") : x.getCentro());
@@ -59,7 +58,7 @@ public class ControladorAula {
 	}
 
 	//Parametro cambiado, dado a que el id es un int no un string.
-	public void verAula(int id) {
+	public void verAula(String id) {
 		for (Aula x : aulas) {
 			if (x.getId() == id) {
 				System.out.println(this.vistaAula.renderAula(x));
@@ -70,7 +69,7 @@ public class ControladorAula {
 	
 	public void requestVerAula() {
 		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
-		Aula aulaSeleccionada = new Aula(0, "", 0, 0.0, 0, "");
+		Aula aulaSeleccionada = new Aula("", "", 0, 0.0, 0, "");
 		Scanner s = new Scanner(System.in);
 		int attemps = 3;
 
@@ -82,17 +81,16 @@ public class ControladorAula {
 		}
 
 		while(!aulas.contains(aulaSeleccionada) && attemps > 0){
-			aulas.forEach((x) -> {
-				System.out.println( x.getId() + " | " + x.getCentro());
-			});
-			int idAulaSeleccionada = s.nextInt();
+			aulas.forEach((x) -> {System.out.println( x.getId() + " | " + x.getCentro());});
+			String idAulaSeleccionada = s.nextLine();
 			for( Aula x : aulas){
 				if(x.getId() == idAulaSeleccionada)
 					aulaSeleccionada = x;
+				else{
+					System.out.println("Por favor, selecciona un id de la lista.");
+					attemps--;
+				}
 			}
-			if(!aulas.contains(aulaSeleccionada))
-				System.out.println("Por favor, selecciona un id de la lista.");
-			attemps--;
 		}
 
 		this.verAula((aulaSeleccionada.getId()));
@@ -102,19 +100,9 @@ public class ControladorAula {
 		this.vistaAula.renderNewAula();
 	}
 	
-	public void requestBorrarAula() {
-
-	}
+	public void requestBorrarAula() {this.vistaAula.renderEliminarAula();}
 	
-	public void requestUpdate() {
-	
-	}
+	public void requestUpdate() {this.vistaAula.renderUpdateAula();}
 
-	public void iniciarMonitorizacion(){
 
-	}
-
-	public void pausarMonitorizacion(){
-
-	}
 }

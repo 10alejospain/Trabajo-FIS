@@ -38,6 +38,8 @@ public class VistaAula {
 		Scanner scanner = new Scanner(System.in);
 		PrintStream j = System.out;
 		HashMap<String,String> datos = new HashMap<>();
+		j.print("ID del aula: ");
+		datos.put("id",scanner.nextLine());
 		j.print("Centro del aula: ");
 		datos.put("centro", scanner.nextLine());
 		j.print("Numero del centro: ");
@@ -49,5 +51,37 @@ public class VistaAula {
 		j.print("Tipo de aula: ");
 		datos.put("tipo", scanner.nextLine());
 		controladorAula.crearAula(datos);
+	}
+
+	public void renderUpdateAula(){
+		Scanner scanner = new Scanner(System.in);
+		HashMap<String,String> datos = new HashMap<>();
+		System.out.printf("\n¿Que aula desea modificar? Introduzca su id: ");
+		String id = scanner.nextLine();
+		boolean seguir= true;
+		while(seguir){
+			System.out.printf("¿Que dato desea modificar?: ");
+			String dato = scanner.nextLine();
+			System.out.printf("¿Que valor nuevo le quiere asignar?: ");
+			String valor = scanner.nextLine();
+			datos.put(dato,valor);
+			System.out.printf("¿Desea cambiar algo mas? (Y/N): ");
+			String opcion = scanner.nextLine();
+			if(opcion == "N" || opcion == "n"){
+				seguir=false;
+			}
+		}
+
+		controladorAula.update(id,datos);
+	}
+
+	public void renderEliminarAula(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.printf("¿Que aula desea eliminar? Introduce su id: ");
+		String idtemp = scanner.nextLine();
+		controladorAula.borrarAula(idtemp);
+	}
+	public void renderVerAula(){
+		controladorAula.requestVerAula();
 	}
 }

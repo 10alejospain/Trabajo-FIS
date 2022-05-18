@@ -3,7 +3,7 @@ package Models;
 import Interfaces.IAula;
 
 public class Aula implements IAula {
-  private int id;
+  private String id;
   private String centro;
   private int numeroCentro;
   private Double superficie;
@@ -11,7 +11,7 @@ public class Aula implements IAula {
   private String tipo;
 
 
-  public Aula(int id, String centro, int numeroCentro, Double superficie, int aforo, String tipo) {
+  public Aula(String id, String centro, int numeroCentro, Double superficie, int aforo, String tipo) {
     this.id = id;
     this.centro = centro;
     this.numeroCentro = numeroCentro;
@@ -20,11 +20,9 @@ public class Aula implements IAula {
     this.tipo = tipo;
   }
 
-  public int getId() {
-    return id;
-  }
+  public String getId() {return id;}
 
-  public void setId(int id) {
+  public void setId(String id) {
     this.id = id;
   }
 
@@ -32,9 +30,7 @@ public class Aula implements IAula {
     return centro;
   }
 
-  public Integer getNumero_Centro() {
-    return null;
-  }
+  public int getNumero_Centro() {return numeroCentro;}
 
   public void setCentro(String centro) {
     this.centro = centro;

@@ -8,11 +8,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/IAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Aula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Aula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,6 +34,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2958ELAIi5I2cpyrnLLA9qclnLZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -41,7 +52,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/0-GIT/Trabajo-FIS&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alber/Desktop/Uni/Apuntes/2º Curso/2º Semestre/FIS/Practicas/Trabajo-FIS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -72,6 +87,9 @@
       <workItem from="1652391473860" duration="130000" />
       <workItem from="1652732981429" duration="1283000" />
       <workItem from="1652808433339" duration="6553000" />
+      <workItem from="1652817475230" duration="435000" />
+      <workItem from="1652818705018" duration="789000" />
+      <workItem from="1652857946293" duration="7444000" />
     </task>
     <task id="LOCAL-00001" summary="Vista sistema central &gt; usuario">
       <created>1652733860001</created>
