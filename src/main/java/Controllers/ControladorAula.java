@@ -10,53 +10,99 @@ package Controllers;//
 //
 
 
+import Interfaces.IAula;
+import Models.Aula;
 import System.SistemaCentral;
 import Views.*;
 
-import java.util.HashMap;
-
+import java.util.*;
 
 public class ControladorAula {
 
-	private SistemaCentral SistemaA;
-	private VistaAula VistaA;
+	private SistemaCentral sistemaCentral;
+	private VistaAula vistaAula = new VistaAula(this);
+	private List<Aula> aulas = new ArrayList<Aula>();
 	public void crearAula(HashMap<String , String> map) {
-	
+		Random random = new Random();
+		Aula aula = new Aula(
+				map.get("id"),
+				map.get("centro"),
+				Integer.parseInt(map.get("numeroCentro")),
+				Double.parseDouble(map.get("superficie")),
+				Integer.parseInt(map.get("aforo")),
+				map.get("tipo")
+		);
+		aulas.add(aula);
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void borrarAula(String id) {
-	
+		aulas.forEach((x) -> {
+			if(x.getId() == id) {
+				aulas.remove(x);
+			}
+		});
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void update(String id, HashMap<String , String> map) {
-	
+		aulas.forEach((x) -> {
+			if(x.getId() == id){
+				x.setCentro(map.get("centro") != null ? map.get("centro") : x.getCentro());
+				x.setNumeroCentro(map.get("numeroCentro") != null ? Integer.parseInt(map.get("numeroCentro")) : x.getNumeroCentro());
+				x.setSuperficie(map.get("superficie") != null ? Double.valueOf(map.get("superficie")) : x.getSuperficie());
+				x.setAforo(map.get("aforo") != null ? Integer.parseInt(map.get("aforo")) : x.getAforo());
+				x.setTipo(map.get("tipo") != null ? map.get("tipo") : x.getCentro());
+			}
+		});
 	}
-	
+
+	//Parametro cambiado, dado a que el id es un int no un string.
 	public void verAula(String id) {
-	
+		for (Aula x : aulas) {
+			if (x.getId() == id) {
+				System.out.println(this.vistaAula.renderAula(x));
+				break;
+			}
+		}
 	}
 	
 	public void requestVerAula() {
-	
+		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
+		Aula aulaSeleccionada = new Aula("", "", 0, 0.0, 0, "");
+		Scanner s = new Scanner(System.in);
+		int attemps = 3;
+
+		if(aulas.size() == 0) {
+			System.out.println("No hay aulas registradas en el sistema.");
+			attemps = 0;
+		} else {
+			System.out.println("Seleccione un id de la siguiente lista de Aulas disponibles \nen el sistema:\n");
+		}
+
+		while(!aulas.contains(aulaSeleccionada) && attemps > 0){
+			aulas.forEach((x) -> {System.out.println( x.getId() + " | " + x.getCentro());});
+			String idAulaSeleccionada = s.nextLine();
+			for( Aula x : aulas){
+				if(x.getId() == idAulaSeleccionada)
+					aulaSeleccionada = x;
+				else{
+					System.out.println("Por favor, selecciona un id de la lista.");
+					attemps--;
+				}
+			}
+		}
+
+		this.verAula((aulaSeleccionada.getId()));
 	}
 	
 	public void requestCrearAula() {
-	
+		this.vistaAula.renderNewAula();
 	}
 	
-	public void requestBorrarAula() {
+	public void requestBorrarAula() {this.vistaAula.renderEliminarAula();}
 	
-	}
-	
-	public void requestUpdate() {
-	
-	}
+	public void requestUpdate() {this.vistaAula.renderUpdateAula();}
 
-	public void iniciarMonitorizacion(){
 
-	}
-
-	public void pausarMonitorizacion(){
-
-	}
 }

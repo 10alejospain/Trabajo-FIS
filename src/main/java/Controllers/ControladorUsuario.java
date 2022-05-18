@@ -8,43 +8,120 @@ package Controllers;//
 //  @ Author : 
 //
 //
+import Models.Alumno;
+import Models.PAS;
+import Models.PDI;
 import Models.Usuario;
 import System.SistemaCentral;
 import Views.VistaUsuario;
 import servidor.Autenticacion;
 import servidor.ObtencionDeRol;
+import servidor.UPMUsers;
+import utilidades.Cifrado;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
+//El controlador del usuario necesita la funcionalidad de suscribirse y des-suscribirse a un aula.
 public class ControladorUsuario {
-	private List<Usuario> usuarios;
+
 	private SistemaCentral sistemaU;
-	private VistaUsuario vista;
+	final VistaUsuario vista;
+
+	private List<Usuario> usuarios = new ArrayList<Usuario>();//Usuarios registrados
+	private Usuario loggedUser;//Usuario loggeado
 
 	public ControladorUsuario(){
 		vista = new VistaUsuario(this);
 	}
 	public void darAlta(HashMap<String, String> map) {
+		Autenticacion auth = new Autenticacion();
 		String correo = map.get("correo");
+		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
 
-		//if ()
+		if (auth.existeCuentaUPM(correo)){
+			if (rol == "ALUMNO"){
+				Alumno alumno = new Alumno(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						null
+				);
+
+				usuarios.add(alumno);
+				vista.renderAlumno(alumno);
+			}
+			else if (rol == "PAS"){
+				PAS pas = new PAS(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						0,
+						0
+				);
+
+				usuarios.add(pas);
+				vista.renderPAS(pas);
+			}
+			else { //PDI
+				PDI pdi = new PDI(
+						map.get("nombre"),
+						map.get("primer apellido"),
+						map.get("segundo apellido"),
+						map.get("correo"),
+						Cifrado.cifrar(map.get("contraseña")),
+						map.get("dni"),
+						0,
+						null,
+						null
+				);
+
+				usuarios.add(pdi);
+				vista.renderPDI(pdi);
+			}
+		}
+		else {
+			vista.renderError("El correo proporcionado no existe en la BD de la UPM");
+		}
+
+
 	}
 	
 	public void requestDarAlta() {
-		vista.renderNewUsuario();
+		vista.renderNewUsuario();// Pide al controlador que invoque la vista para crear un nuevo usr
 	}
 	
 	public void eliminarUsuario(String correo) {
-
+		usuarios.forEach((x) -> {
+			if (x.getCorreo().equals(correo)) {
+				usuarios.remove(x);
+			}
+		});
 	}
 	
 	public void requestEliminarUsuario() {
 		vista.renderUpdateUsuario();
 	}
-	
-	public void update(String correo, HashMap<String , String > map) {
 
+	//Aunque no se use, he metido esto, por si acaso.
+	public void update(String correo, HashMap<String , String > map) {
+		usuarios.forEach((x) -> {
+			if(x.getCorreo().equals(correo)){
+				x.setCorreo(map.get("correo") != null ? map.get("correo") : x.getCorreo());
+				x.setContraseña(map.get("contraseña") != null ? map.get("contraseña") : x.getContraseña());
+				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDni());
+				x.setNombre(map.get("nombre") != null ? map.get("nombre") : x.getNombre());
+				x.setPrimerApellido(map.get("primer apellido") != null ? map.get("primer apellido") : x.getPrimerApellido());
+				x.setSegundoApellido(map.get("segundo apellido") != null ? map.get("segundo apellido") : x.getPrimerApellido());
+			}
+		});
 	}
 	
 	public void requestUpdate() {
@@ -60,11 +137,11 @@ public class ControladorUsuario {
 	}
 	
 	public void requestVerUsuario() {
-
+		vista.renderNewUsuario();
 	}
 	
 	public Usuario buscarUsuario(String correo) {
-		for(int x=0; x<usuarios.size(); x++){
+		for (int x = 0; x < usuarios.size(); x++) {
 			if(usuarios.get(x).getCorreo() == correo){
 				return usuarios.get(x);
 			}
@@ -76,6 +153,10 @@ public class ControladorUsuario {
 	}
 
 	public void logout(){
-
+		if(loggedUser != null){
+			loggedUser = null;
+		}
 	}
+
+
 }

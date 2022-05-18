@@ -49,6 +49,8 @@ public class VistaUsuario {
 		datos.put("correo",scanner.nextLine());
 		System.out.printf("\nIntroduce tu constraseña: ");
 		datos.put("contraseña",scanner.nextLine());
+		System.out.printf("\nIntroduce tu dni: ");
+		datos.put("dni",scanner.nextLine());
 		Controlador.darAlta(datos);
 	}
 

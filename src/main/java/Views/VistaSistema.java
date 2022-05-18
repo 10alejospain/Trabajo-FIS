@@ -11,18 +11,58 @@ package Views;//
 
 import System.*;
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 
 public class VistaSistema {
-	private SistemaCentral Sistema;
-
+	private SistemaCentral sistemaCentral;
+	private Scanner scanner = new Scanner(System.in);
 	public VistaSistema(SistemaCentral sistema) {
-		Sistema = sistema;
+		sistemaCentral = sistema;
 	}
 
 	public String renderPaginaPrincipal() {
-		System.out.println("Menu de Acciones: ");
-		System.out.print("1.- Añadir usuario.\n2.- Añadir aula.\n3.- Suscribir a un aula.");
+		boolean exit = false;
 
+		while(!exit) {
+			System.out.println("\n************************************************************" +
+					           "\n******************** My UPM Classroom **********************" +
+					           "\n************************************************************" +
+					           "\nMenu de Acciones: ");
+			System.out.print("1.- Anadir usuario.\n2.- Ver un usuario.\n3.- Modificar un usuario.\n4.- Borrar un usuario.\n5.- Anadir aula.\n6.- Ver Aula.\n7.- Modificar un aula.\n8.- Borrar un aula.\n0.- EXIT.\n");
+			switch (scanner.nextLine()) {
+				case "0":
+					exit = true;
+					break;
+				case "1":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/new", new HashMap<>());
+					break;
+				case "2":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/views", new HashMap<>());
+					break;
+				case "3":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/update", new HashMap<>());
+					break;
+				case "4":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/delete", new HashMap<>());
+					break;
+				case "5":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/new", new HashMap<>());
+					break;
+				case "6":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/views", new HashMap<>());
+					break;
+				case "7":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/update", new HashMap<>());
+					break;
+				case "8":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/delete", new HashMap<>());
+					break;
+				default:
+					System.out.println("\nPor favor, seleccione una de las opciones.\n");
+			}
+		}
 		return null;
 	}
 	

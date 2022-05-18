@@ -21,7 +21,8 @@ public class PAS extends Usuario implements IPAS {
         this.añoIncorporacion = añoIncorporacion;
     }
 
-    public PAS(int codigoPersonal, int añoIncorporacion) {
+    public PAS(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, int codigoPersonal, int añoIncorporacion) {
+        super(nombre,primerApellido,segundoApellido,correo,contraseña,dni);
         this.codigoPersonal = codigoPersonal;
         this.añoIncorporacion = añoIncorporacion;
     }
