@@ -13,6 +13,8 @@ import Controllers.ControladorUsuario;
 import Interfaces.IAlumno;
 import Interfaces.IPAS;
 import Interfaces.IPDI;
+import Interfaces.IUsuario;
+import servidor.ObtencionDeRol;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -36,6 +38,18 @@ public class VistaUsuario {
 		System.out.printf(pas.toString());
 	}
 
+	public void renderUsuario(IUsuario usuario){
+		String rol = ObtencionDeRol.get_UPM_AccountRol(usuario.getCorreo()).toString();
+		if (rol == "ALUMNO"){
+			renderAlumno();
+		}
+		else if (rol == "PAS"){
+			renderPAS();
+		}
+		else { //PDI
+			renderPDI();
+		}
+	}
 	public void renderNewUsuario(){
 		Scanner scanner = new Scanner(System.in);
 		HashMap<String,String> datos = new HashMap<>();

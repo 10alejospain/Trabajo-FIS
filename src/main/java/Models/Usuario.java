@@ -1,6 +1,6 @@
 package Models;
 import Interfaces.*;
-public class Usuario implements IAlumno{
+public class Usuario implements IUsuario{
 
   private String nombre;
   private String primerApellido;
@@ -55,6 +55,11 @@ public class Usuario implements IAlumno{
 
   public String getContraseña() {
     return contraseña;
+  }
+
+  @Override
+  public String getDNI() {
+    return dni;
   }
 
   public void setContraseña(String contraseña) {

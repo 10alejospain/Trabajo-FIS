@@ -130,14 +130,16 @@ public class ControladorUsuario {
 	
 	public void verUsuario(String correo) {
 		Autenticacion auth = new Autenticacion();
-		ObtencionDeRol rol = new ObtencionDeRol();
-		if (!auth.existeCuentaUPM(correo)) {
-			vista.renderError("El correo no existe");
+		if (auth.existeCuentaUPM(correo)){
+			vista.renderUsuario(buscarUsuario(correo));
+		}
+		else {
+			vista.renderError("El correo proporcionado no existe en la BD de la UPM");
 		}
 	}
 	
 	public void requestVerUsuario() {
-		vista.renderNewUsuario();
+		vista.renderVerUsuario();
 	}
 	
 	public Usuario buscarUsuario(String correo) {
