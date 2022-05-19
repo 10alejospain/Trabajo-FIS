@@ -57,43 +57,21 @@ public class ControladorAula {
 		});
 	}
 
-	//Parametro cambiado, dado a que el id es un int no un string.
-	public void verAula(String id) {
-		for (Aula x : aulas) {
-			if (x.getId() == id) {
-				System.out.println(this.vistaAula.renderAula(x));
-				break;
+	/
+	
+	public void requestVerAula() {
+		vistaAula.renderIDAula();
+	}
+	public void verAula(String  IDAula){
+		for(Aula aula: aulas){
+			if (aula.getId()==IDAula){
+				vistaAula.renderAula(aula);
 			}
 		}
 	}
-	
-	public void requestVerAula() {
-		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
-		Aula aulaSeleccionada = new Aula("", "", 0, 0.0, 0, "");
-		Scanner s = new Scanner(System.in);
-		int attemps = 3;
 
-		if(aulas.size() == 0) {
-			System.out.println("No hay aulas registradas en el sistema.");
-			attemps = 0;
-		} else {
-			System.out.println("Seleccione un id de la siguiente lista de Aulas disponibles \nen el sistema:\n");
-		}
-
-		while(!aulas.contains(aulaSeleccionada) && attemps > 0){
-			aulas.forEach((x) -> {System.out.println( x.getId() + " | " + x.getCentro());});
-			String idAulaSeleccionada = s.nextLine();
-			for( Aula x : aulas){
-				if(x.getId() == idAulaSeleccionada)
-					aulaSeleccionada = x;
-				else{
-					System.out.println("Por favor, selecciona un id de la lista.");
-					attemps--;
-				}
-			}
-		}
-
-		this.verAula((aulaSeleccionada.getId()));
+	public void requestVerAulas(){
+		vistaAula.renderAulas(aulas);
 	}
 	
 	public void requestCrearAula() {

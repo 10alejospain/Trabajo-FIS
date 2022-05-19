@@ -46,6 +46,9 @@ public class SistemaCentral implements ISistemaCentral{
 			case "https://myupmclassroom/users/views":
 				controladorUsuario.requestVerUsuario();
 				break;
+			case "https://myupmclassroom/aulas/all":
+				controladorAula.requestVerAulas();
+				break;
 		}
 		return null;
 	}
