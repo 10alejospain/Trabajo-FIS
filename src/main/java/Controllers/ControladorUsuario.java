@@ -9,6 +9,8 @@ package Controllers;//
 //
 //
 import Interfaces.IAlumno;
+import Interfaces.IPAS;
+import Interfaces.IPDI;
 import Models.Alumno;
 import Models.PAS;
 import Models.PDI;
@@ -132,7 +134,17 @@ public class ControladorUsuario {
 	public void verUsuario(String correo) {
 		Autenticacion auth = new Autenticacion();
 		if (auth.existeCuentaUPM(correo)){
-			vista.renderUsuario(buscarUsuario(correo));
+			String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
+			Usuario usuario =buscarUsuario(correo);
+			if (rol == "ALUMNO"){
+				vista.renderAlumno((IAlumno) usuario);
+			}
+			else if (rol == "PAS"){
+				vista.renderPAS((IPAS) usuario);
+			}
+			else { //PDI
+				vista.renderPDI((IPDI) usuario);
+			}
 		}
 		else {
 			vista.renderError("El correo proporcionado no existe en la BD de la UPM");
