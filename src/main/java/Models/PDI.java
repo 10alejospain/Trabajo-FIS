@@ -21,24 +21,19 @@ public class PDI extends Usuario implements IPDI{
         this.codigoTrabajador = codigoTrabajador;
     }
 
-    @Override
-    public Integer getCodigo_Trabajadorl() {
-        return null;
-    }
+
 
     public String getCategoria() {
         return categoria;
     }
 
-    @Override
-    public String getHorario_Trabajol() {
-        return null;
-    }
+
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
+    @Override
     public String getHorarioTrabajo() {
         return horarioTrabajo;
     }

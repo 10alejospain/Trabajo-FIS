@@ -13,9 +13,9 @@ package Interfaces;//
 
 
 public interface IPDI {
-	public Integer getCodigo_Trabajadorl();
+	public int getCodigoTrabajador();
 	
 	public String getCategoria();
 	
-	public String getHorario_Trabajol();
+	public String getHorarioTrabajo();
 }

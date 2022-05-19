@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Tests de los getters">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Añadido incompleto Obervador y controller de subs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/AlumnoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/AlumnoTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/Observador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Observador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,104 +40,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;Models.Usuario&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sergio.morales/Documents/0 - GIT/Trabajo-FIS&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/alejo/FIS/Trabajo-FIS/pom.xml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="Models.Usuario" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="Models" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.AlumnoTests">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Trabajo-FIS" />
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlumnoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlumnoTest.testGetNombre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTest" />
-      <option name="METHOD_NAME" value="testGetNombre" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlumnoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlumnoTests.testSetNombre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Models" />
-      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTests" />
-      <option name="METHOD_NAME" value="testSetNombre" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.AlumnoTests" />
-        <item itemvalue="JUnit.AlumnoTests.testSetNombre" />
-        <item itemvalue="JUnit.AlumnoTest" />
-        <item itemvalue="JUnit.AlumnoTest.testGetNombre" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -151,31 +66,26 @@
       <option name="presentableId" value="Default" />
       <updated>1652391472653</updated>
       <workItem from="1652391473860" duration="130000" />
-      <workItem from="1652979789904" duration="6000000" />
     </task>
-    <task id="LOCAL-00001" summary="Tests de los getters">
-      <created>1652984611461</created>
+    <task id="LOCAL-00001" summary="Comentarios sobre implementacion para corregir luego">
+      <created>1652961241619</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1652984611461</updated>
+      <updated>1652961241619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Añadido incompleto Obervador y controller de subs">
+      <created>1652984321810</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652984321810</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -190,11 +100,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tests de los getters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests de los getters" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Comentarios sobre implementacion para corregir luego" />
+    <MESSAGE value="Añadido incompleto Obervador y controller de subs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido incompleto Obervador y controller de subs" />
   </component>
 </project>
