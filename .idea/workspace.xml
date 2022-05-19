@@ -4,39 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Añadir Aula y Ver aula funcionalidad completada.">
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/IAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/IAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Aula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Aula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2958ELAIi5I2cpyrnLLA9qclnLZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -52,29 +35,21 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alber/Desktop/Uni/Apuntes/2º Curso/2º Semestre/FIS/Practicas/Trabajo-FIS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/alejo/FIS/Trabajo-FIS/pom.xml&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Trabajo-FIS" />
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,27 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652391472653</updated>
       <workItem from="1652391473860" duration="130000" />
-      <workItem from="1652732981429" duration="1283000" />
-      <workItem from="1652808433339" duration="6553000" />
-      <workItem from="1652817475230" duration="435000" />
-      <workItem from="1652818705018" duration="789000" />
-      <workItem from="1652857946293" duration="7444000" />
     </task>
-    <task id="LOCAL-00001" summary="Vista sistema central &gt; usuario">
-      <created>1652733860001</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1652733860001</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Añadir Aula y Ver aula funcionalidad completada.">
-      <created>1652814895008</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1652814895008</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,8 +79,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Vista sistema central &gt; usuario" />
-    <MESSAGE value="Añadir Aula y Ver aula funcionalidad completada." />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir Aula y Ver aula funcionalidad completada." />
   </component>
 </project>

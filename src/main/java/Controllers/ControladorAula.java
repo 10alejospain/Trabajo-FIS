@@ -38,7 +38,7 @@ public class ControladorAula {
 	//Parametro cambiado, dado a que el id es un int no un string.
 	public void borrarAula(String id) {
 		aulas.forEach((x) -> {
-			if(x.getId() == id) {
+			if(Objects.equals(x.getId(), id)) {
 				aulas.remove(x);
 			}
 		});
@@ -47,7 +47,7 @@ public class ControladorAula {
 	//Parametro cambiado, dado a que el id es un int no un string.
 	public void update(String id, HashMap<String , String> map) {
 		aulas.forEach((x) -> {
-			if(x.getId() == id){
+			if(Objects.equals(x.getId(), id)){
 				x.setCentro(map.get("centro") != null ? map.get("centro") : x.getCentro());
 				x.setNumeroCentro(map.get("numeroCentro") != null ? Integer.parseInt(map.get("numeroCentro")) : x.getNumeroCentro());
 				x.setSuperficie(map.get("superficie") != null ? Double.valueOf(map.get("superficie")) : x.getSuperficie());
@@ -67,7 +67,7 @@ public class ControladorAula {
 		}
 	}
 	
-	public void requestVerAula() {
+	public void requestVerAula(String idAula) {
 		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
 		Aula aulaSeleccionada = new Aula("", "", 0, 0.0, 0, "");
 		Scanner s = new Scanner(System.in);
@@ -100,7 +100,9 @@ public class ControladorAula {
 		this.vistaAula.renderNewAula();
 	}
 	
-	public void requestBorrarAula() {this.vistaAula.renderEliminarAula();}
+	public void requestBorrarAula() {
+		this.vistaAula.renderEliminarAula();
+	}
 	
 	public void requestUpdate() {this.vistaAula.renderUpdateAula();}
 
