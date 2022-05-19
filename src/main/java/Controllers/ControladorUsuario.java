@@ -11,10 +11,7 @@ package Controllers;//
 import Interfaces.IAlumno;
 import Interfaces.IPAS;
 import Interfaces.IPDI;
-import Models.Alumno;
-import Models.PAS;
-import Models.PDI;
-import Models.Usuario;
+import Models.*;
 import System.SistemaCentral;
 import Views.VistaUsuario;
 import servidor.Autenticacion;
@@ -33,7 +30,8 @@ public class ControladorUsuario {
 	final VistaUsuario vista;
 
 	private List<Usuario> usuarios = new ArrayList<Usuario>();//Usuarios registrados
-	private Usuario loggedUser;//Usuario loggeado
+
+ 	private Usuario loggedUser;//Usuario loggeado
 
 	public ControladorUsuario(){
 		vista = new VistaUsuario(this);
