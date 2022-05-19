@@ -6,14 +6,18 @@ public class Observador extends Usuario{
 
     private List<Aula> aulasSubscritas;
 
-    Observador{
+    Observador(){
         super();
-
     }
 
 
+    public void addAula(Aula aula){
+        this.aulasSubscritas.add(aula);
+    }
 
-
+    public void removeAula(Aula aula){
+        this.aulasSubscritas.remove(aula);
+    }
     public List<Aula> getAulasSubscritas(){
         return aulasSubscritas;
     }
