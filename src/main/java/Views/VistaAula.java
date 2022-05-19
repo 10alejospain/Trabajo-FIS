@@ -11,9 +11,11 @@ package Views;//
 
 import Controllers.ControladorAula;
 import Interfaces.*;
+import Models.Aula;
 
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -91,4 +93,10 @@ public class VistaAula {
 
 		controladorAula.requestVerAula();
 	}
+	public void renderAulas(List<Aula> aulas){
+		for(Aula aula : aulas){
+			System.out.printf("\n"+aula.toString());
+		}
+	}
+
 }
