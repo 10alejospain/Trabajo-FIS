@@ -1,14 +1,19 @@
 package Controllers;
 
+import Models.Observador;
 import Views.VistaSuscripciones;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControladorSuscripciones {
 
-    ControladorAula CAula;
-    ControladorUsuario CUsuario;
-    VistaSuscripciones vistaSuscripciones = new VistaSuscripciones(this);
+    private ControladorAula CAula;
+    private ControladorUsuario CUsuario;
+    private VistaSuscripciones vistaSuscripciones = new VistaSuscripciones(this);
+    private List<Observador> observadores = new ArrayList<>();
 
-    ControladorSuscripciones (ControladorUsuario CUsuario, ControladorAula CAula){
+    public ControladorSuscripciones (ControladorUsuario CUsuario, ControladorAula CAula){
         this.CUsuario = CUsuario;
         this.CAula = CAula;
     }
@@ -27,6 +32,25 @@ public class ControladorSuscripciones {
 
     }
     public void requestSuscribirseAula(){
-        vistaSuscripciones.renderSuscribirseAula(CAula);
+        vistaSuscripciones.renderSuscribirseAula1();
+    }
+    public void suscribirse(String email){
+        vistaSuscripciones.verAulasSuscritas(findEmail(email).getAulasSubscritas());
+        vistaSuscripciones.renderSuscribirseAula2(email);
+    }
+    public void requestDesuscribirseAula(){
+        vistaSuscripciones.renderDesuscribirse1();
+    }
+    public void desuscribirse(String email){
+        vistaSuscripciones.verAulasSuscritas(findEmail(email).getAulasSubscritas());
+        vistaSuscripciones.renderDesuscribirseAula2(email);
+    }
+    public Observador findEmail(String email){
+        for(Observador obv : observadores){
+            if (obv.getCorreo() == email){
+                return obv;
+            }
+        }
+        return null;
     }
 }

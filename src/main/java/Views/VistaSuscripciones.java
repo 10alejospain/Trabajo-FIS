@@ -1,7 +1,9 @@
 package Views;
 import Controllers.ControladorAula;
 import Controllers.ControladorSuscripciones;
+import Models.Aula;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class VistaSuscripciones {
@@ -11,29 +13,35 @@ public class VistaSuscripciones {
         this.controladorSuscripciones = controladorSuscripciones;
     }
 
-    public void renderSuscribirseAula(ControladorAula controladorAula){
+    public void renderSuscribirseAula1(){
         System.out.printf("\n¿Que correo tienes?: ");
         Scanner scanner = new Scanner(System.in);
         String email = scanner.nextLine();
-        System.out.printf("\n¿Desea ver todas las salas? (Y/N): ");
-        if (scanner.nextLine()=="Y" || scanner.nextLine()=="y"){
-            controladorAula.requestVerAulas();
-        }
+        controladorSuscripciones.suscribirse(email);
+    }
+    public void verAulasSuscritas(List<Aula> list){
+        VistaAula vistaAula = new VistaAula();
+        vistaAula.renderAulas(list);
+    }
+    public void renderSuscribirseAula2(String email){
+
+        Scanner scanner = new Scanner(System.in);
         System.out.printf("\nIntroduzca el ID de la sala a la que quieres suscribirse: ");
         String id = scanner.nextLine();
         controladorSuscripciones.suscribirseAula(id,email);
     }
-
-    public void renderDesuscribirseAula(){
+    public void renderDesuscribirse1(){
         System.out.printf("\n¿Que correo tienes?: ");
         Scanner scanner = new Scanner(System.in);
         String email = scanner.nextLine();
+        controladorSuscripciones.desuscribirse(email);
+    }
+
+    public void renderDesuscribirseAula2(String email){
+        Scanner scanner = new Scanner(System.in);
         System.out.printf("\nIntroduzca el ID de la sala a la que quieres desuscribirse: ");
         String id = scanner.nextLine();
         controladorSuscripciones.desuscribirseAula(id,email);
     }
 
-    public void verAulasSuscritas(){
-
-    }
 }

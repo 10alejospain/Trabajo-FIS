@@ -1,7 +1,7 @@
 package Models;
 
 import Interfaces.IPDI;
-public class PDI extends Usuario implements IPDI{
+public class PDI extends Observador implements IPDI{
   private int codigoTrabajador;
   private String categoria;
   private String horarioTrabajo;
@@ -42,11 +42,7 @@ public class PDI extends Usuario implements IPDI{
         this.horarioTrabajo = horarioTrabajo;
     }
 
-    public PDI(int codigoTrabajador, String categoria, String horarioTrabajo) {
-        this.codigoTrabajador = codigoTrabajador;
-        this.categoria = categoria;
-        this.horarioTrabajo = horarioTrabajo;
-    }
+
 
     @Override
     public String toString(){
