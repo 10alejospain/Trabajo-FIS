@@ -1,9 +1,12 @@
 package Controllers;
 
+import Views.VistaSuscripciones;
+
 public class ControladorSuscripciones {
 
     ControladorAula CAula;
     ControladorUsuario CUsuario;
+    VistaSuscripciones vistaSuscripciones = new VistaSuscripciones(this);
 
     ControladorSuscripciones (ControladorUsuario CUsuario, ControladorAula CAula){
         this.CUsuario = CUsuario;
@@ -22,5 +25,8 @@ public class ControladorSuscripciones {
     }
     public void desuscribirseAula(String idAula, String correoUsuario){
 
+    }
+    public void requestSuscribirseAula(){
+        vistaSuscripciones.renderSuscribirseAula(CAula);
     }
 }
