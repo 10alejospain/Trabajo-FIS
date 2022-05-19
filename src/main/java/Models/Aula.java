@@ -30,7 +30,7 @@ public class Aula implements IAula {
     return centro;
   }
 
-  public int getNumero_Centro() {return numeroCentro;}
+
 
   public void setCentro(String centro) {
     this.centro = centro;
@@ -68,10 +68,5 @@ public class Aula implements IAula {
     this.tipo = tipo;
   }
 
-  @Override
-  public String toString(){
-    return "\nID: "+ this.id + "\nCentro: " + this.centro + "\nSuperficie: " + this.superficie
-            + "\nAforo: " + this.aforo + "\nTipo: " + this.tipo;
-  }
 
 }

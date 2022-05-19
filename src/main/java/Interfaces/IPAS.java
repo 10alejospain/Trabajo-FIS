@@ -13,7 +13,7 @@ package Interfaces;//
 
 
 public interface IPAS {
-	public Integer getCodigo_Personal();
+	public int getCodigoPersonal();
 	
-	public Integer getAño_Incorporacion();
+	public int getAñoIncorporacion();
 }

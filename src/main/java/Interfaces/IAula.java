@@ -17,7 +17,7 @@ public interface IAula {
 	
 	public String getCentro();
 	
-	public int getNumero_Centro();
+	public int getNumeroCentro();
 	
 	public int getAforo();
 	public String getTipo();

@@ -29,7 +29,7 @@ public class VistaAula {
 		return "************************************************************" +
 				"\nVISTA AULA " + aula.getId() +
 				"\nCentro: " + aula.getCentro() +
-				"\nNumero del Centro: " + aula.getNumero_Centro() +
+				"\nNumero del Centro: " + aula.getNumeroCentro() +
 				"\nSuperficie del aula: " + aula.getSuperficie() + " m2" +
 				"\nAforo del aula: " + aula.getAforo() + " personas" +
 				"\nTipo de aula: " + aula.getTipo()+
@@ -90,9 +90,7 @@ public class VistaAula {
 		String idAula = scanner.nextLine();//Se puede implementar o bien metiendo un metodo que muestre todas las aulas disponibles o bien pidiendo el id del aula
 		controladorAula.verAula(idAula);
 	}
-	public void renderAula(Aula aula){
-		System.out.printf("\n"+aula.toString());
-	}
+
 	public void renderAulas(List<Aula> aulas){
 		for(Aula aula : aulas){
 			renderAula(aula);

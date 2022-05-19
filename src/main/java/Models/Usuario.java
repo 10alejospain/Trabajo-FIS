@@ -71,18 +71,11 @@ public class Usuario implements IUsuario{
     this.contraseña = contraseña;
   }
 
-  public String getDni() {
-    return dni;
-  }
 
   public void setDni(String dni) {
     this.dni = dni;
   }
 
-
-  public String getNumero_Matricula() {
-    return null;
-  }
 
 
   @Override

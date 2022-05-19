@@ -27,14 +27,6 @@ public class PAS extends Usuario implements IPAS {
         this.añoIncorporacion = añoIncorporacion;
     }
 
-    public Integer getCodigo_Personal() {
-        return null;
-    }
-
-    public Integer getAño_Incorporacion() {
-        return null;
-    }
-
     @Override
     public String toString(){
         return super.toString() + "Codigo Personal: " + codigoPersonal + "Año de Incorporacion: "+ añoIncorporacion;

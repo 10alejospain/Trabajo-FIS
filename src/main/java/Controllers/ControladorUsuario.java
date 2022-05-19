@@ -117,7 +117,7 @@ public class ControladorUsuario {
 			if(x.getCorreo().equals(correo)){
 				x.setCorreo(map.get("correo") != null ? map.get("correo") : x.getCorreo());
 				x.setContraseña(map.get("contraseña") != null ? map.get("contraseña") : x.getContraseña());
-				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDni());
+				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDNI());
 				x.setNombre(map.get("nombre") != null ? map.get("nombre") : x.getNombre());
 				x.setPrimerApellido(map.get("primer apellido") != null ? map.get("primer apellido") : x.getPrimerApellido());
 				x.setSegundoApellido(map.get("segundo apellido") != null ? map.get("segundo apellido") : x.getPrimerApellido());
