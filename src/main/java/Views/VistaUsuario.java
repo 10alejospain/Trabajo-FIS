@@ -39,16 +39,7 @@ public class VistaUsuario {
 	}
 
 	public void renderUsuario(IUsuario usuario){
-		String rol = ObtencionDeRol.get_UPM_AccountRol(usuario.getCorreo()).toString();
-		if (rol == "ALUMNO"){
-			renderAlumno((IAlumno) usuario);
-		}
-		else if (rol == "PAS"){
-			renderPAS((IPAS) usuario);
-		}
-		else { //PDI
-			renderPDI((IPDI) usuario);
-		}
+
 	}
 	public void renderNewUsuario(){
 		Scanner scanner = new Scanner(System.in);

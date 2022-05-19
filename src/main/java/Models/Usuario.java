@@ -84,6 +84,7 @@ public class Usuario implements IUsuario{
     return null;
   }
 
+
   @Override
   public String toString(){
     return "Nombre: " + nombre + "\nApellidos: "+ primerApellido + " " + segundoApellido + "\nCorreo: " + correo + "\nDNI"+ dni ;

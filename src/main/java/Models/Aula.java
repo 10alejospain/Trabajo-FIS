@@ -67,4 +67,11 @@ public class Aula implements IAula {
   public void setTipo(String tipo) {
     this.tipo = tipo;
   }
+
+  @Override
+  public String toString(){
+    return "\nID: "+ this.id + "\nCentro: " + this.centro + "\nSuperficie: " + this.superficie
+            + "\nAforo: " + this.aforo + "\nTipo: " + this.tipo;
+  }
+
 }
