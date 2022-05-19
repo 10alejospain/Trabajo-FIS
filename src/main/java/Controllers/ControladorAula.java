@@ -57,7 +57,7 @@ public class ControladorAula {
 		});
 	}
 
-	/
+
 	
 	public void requestVerAula() {
 		vistaAula.renderIDAula();

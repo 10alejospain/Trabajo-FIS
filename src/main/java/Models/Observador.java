@@ -6,10 +6,10 @@ public class Observador extends Usuario{
 
     private List<Aula> aulasSubscritas;
 
-    Observador{
+   /* Observador{
         super();
 
-    }
+    }*/
 
 
 

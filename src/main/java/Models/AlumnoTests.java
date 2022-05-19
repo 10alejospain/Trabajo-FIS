@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AlumnoTests extends Usuario {
@@ -40,9 +42,12 @@ class AlumnoTests extends Usuario {
     }
 
     @Test
-    void testSetNombre() {
+    void testSetNombre() throws NoSuchFieldException, IllegalAccessException {
         String nuevoNombre = "Jose";
 
+        this.alumno.setNombre(nuevoNombre);
+
+        assertEquals(nuevoNombre, this.alumno.getNombre());
     }
 
     @Test
@@ -52,6 +57,11 @@ class AlumnoTests extends Usuario {
 
     @Test
     void testSetPrimerApellido() {
+        String nuevoPrimerApellido = "Viyuelooo";
+
+        this.alumno.setPrimerApellido(nuevoPrimerApellido);
+
+        assertEquals(nuevoPrimerApellido, this.alumno.getPrimerApellido());
     }
 
     @Test
@@ -61,6 +71,11 @@ class AlumnoTests extends Usuario {
 
     @Test
     void testSetSegundoApellido() {
+        String nuevoSegundoApellido = "Caraalmendra";
+
+        this.alumno.setSegundoApellido(nuevoSegundoApellido);
+
+        assertEquals(nuevoSegundoApellido, this.alumno.getSegundoApellido());
     }
 
     @Test
@@ -70,6 +85,11 @@ class AlumnoTests extends Usuario {
 
     @Test
     void testSetCorreo() {
+        String nuevoCorreo = "pepemolon@alumnos.upm.es";
+
+        this.alumno.setCorreo(nuevoCorreo);
+
+        assertEquals(nuevoCorreo, this.alumno.getCorreo());
     }
 
     @Test
@@ -79,6 +99,11 @@ class AlumnoTests extends Usuario {
 
     @Test
     void testSetContraseña() {
+        String nuevaPass = "1234";
+
+        this.alumno.setContraseña(nuevaPass);
+
+        assertEquals(nuevaPass, this.alumno.getContraseña());
     }
 
     @Test
@@ -88,10 +113,16 @@ class AlumnoTests extends Usuario {
 
     @Test
     void testSetDni() {
+        String nuevoDNI = "12341233P";
+
+        this.alumno.setDni(nuevoDNI);
+
+        assertEquals(nuevoDNI, this.alumno.getDni());
     }
 
     @Test
     void testToString() {
+
     }
 
     @Test
@@ -101,6 +132,12 @@ class AlumnoTests extends Usuario {
 
     @Test
     void setNumeroMatricula() {
+
+        String nuevaMatricula = "zo1234";
+
+        this.alumno.setNumeroMatricula(nuevaMatricula);
+
+        assertEquals(nuevaMatricula, this.alumno.getNumeroMatricula());
     }
 
     @Test
@@ -109,6 +146,8 @@ class AlumnoTests extends Usuario {
     }
 
     @Test
-    void testToString1() {
+    void testToStringUsuario() {
+        String resultado = "";
+        assertEquals(this.alumno.toString(), resultado);
     }
 }
