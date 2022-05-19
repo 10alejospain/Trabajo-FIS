@@ -67,7 +67,7 @@ public class ControladorAula {
 		}
 	}
 	
-	public void requestVerAula(String idAula) {
+	public void requestVerAula() {
 		//Seleccion del aula que quiere ver, esto deberiamos meterlo en una vista.
 		Aula aulaSeleccionada = new Aula("", "", 0, 0.0, 0, "");
 		Scanner s = new Scanner(System.in);

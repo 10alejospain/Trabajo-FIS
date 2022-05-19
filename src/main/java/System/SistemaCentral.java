@@ -20,7 +20,7 @@ public class SistemaCentral implements ISistemaCentral{
 	
 	}
 	
-	public String procesarPeticion(String url, HashMap<String , String> map) {
+	public String procesarPeticion(String url) {
 		switch (url){
 			case "https://myupmclassroom/users/new":
 				controladorUsuario.requestDarAlta();

@@ -13,5 +13,5 @@ package Interfaces;//
 import java.util.HashMap;
 
 public interface ISistemaCentral {
-	public String procesarPeticion(String url, HashMap<String,String> params);
+	public String procesarPeticion(String url);
 }

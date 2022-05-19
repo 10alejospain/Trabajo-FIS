@@ -89,6 +89,6 @@ public class VistaAula {
 
 
 
-		controladorAula.requestVerAula(idAula);
+		controladorAula.requestVerAula();
 	}
 }

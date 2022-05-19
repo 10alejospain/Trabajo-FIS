@@ -36,28 +36,28 @@ public class VistaSistema {
 					exit = true;
 					break;
 				case "1":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/users/new", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/new");
 					break;
 				case "2":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/users/views", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/views");
 					break;
 				case "3":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/users/update", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/update");
 					break;
 				case "4":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/users/delete", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/users/delete");
 					break;
 				case "5":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/new", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/new");
 					break;
 				case "6":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/views", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/views");
 					break;
 				case "7":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/update", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/update");
 					break;
 				case "8":
-					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/delete", new HashMap<>());
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/delete");
 					break;
 				default:
 					System.out.println("\nPor favor, seleccione una de las opciones.\n");

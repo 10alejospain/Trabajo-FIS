@@ -68,7 +68,7 @@ public class VistaUsuario {
 		datos.put("dni",scanner.nextLine());
 		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();// no se si esta logica deberia estar en la vista
 		if (rol == "ALUMNO"){
-			System.out.printf("\nIntroduzca tu numero de matricula");
+			System.out.printf("\nIntroduzca tu numero de matricula: ");
 			datos.put("matricula",scanner.nextLine());
 		}
 		else if (rol == "PAS"){

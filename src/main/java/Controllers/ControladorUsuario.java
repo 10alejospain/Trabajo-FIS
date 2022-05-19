@@ -149,6 +149,7 @@ public class ControladorUsuario {
 				return usuarios.get(x);
 			}
 		}
+		vista.renderError("No existe ningun usuario con este correo");
 		return null;
 	}
 
