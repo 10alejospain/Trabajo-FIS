@@ -83,7 +83,23 @@ public class ControladorAula {
 	
 	public void requestUpdate() {this.vistaAula.renderUpdateAula();}
 
+	public Boolean verSiExiste(String id){
+		for(Aula aula : aulas){
+			if(aula.getId()==id){
+				return true;
+			}
+		}
+		return false;
+	}
 
+	public Aula sacarPorID(String id){
+		for (Aula aula : aulas){
+			if (aula.getId()==id){
+				return aula;
+			}
+		}
+		return null;
+	}
 
 
 }

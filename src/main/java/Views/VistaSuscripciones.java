@@ -44,4 +44,8 @@ public class VistaSuscripciones {
         controladorSuscripciones.desuscribirseAula(id,email);
     }
 
+    public void renderError(String error){
+        System.out.printf("\n"+error);
+    }
+
 }

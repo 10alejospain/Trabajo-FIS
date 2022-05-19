@@ -20,15 +20,35 @@ public class ControladorSuscripciones {
 
     public void  suscribirseAula(String idAula, String correoUsuario){
 
-        //buscar el aula con ese id
-        //comprobar que existe
-        //Comprobar qu existe el usuario y que sea de una clase hija de observador
-        //Trnasformar un usuario a un observador
-        //Meter al observador en el aula y el aula en el observador
+        if(!CAula.verSiExiste(idAula)){
+            vistaSuscripciones.renderError("Este aula no existe");
+        }else if(CUsuario.buscarUsuario(correoUsuario)==null){
+            vistaSuscripciones.renderError("Este usuario no existe");
+        }else {
+            Observador temporal = (Observador) CUsuario.buscarUsuario(correoUsuario);
+            if(!observadores.equals(temporal)){
+                observadores.add(temporal);
+            }
+            observadores.get(observadores.indexOf(temporal)).addAula(CAula.sacarPorID(idAula));
+        }
 
 
     }
     public void desuscribirseAula(String idAula, String correoUsuario){
+        if(!CAula.verSiExiste(idAula)){
+            vistaSuscripciones.renderError("\nEste aula no existe");
+        }else if(CUsuario.buscarUsuario(correoUsuario)==null){
+            vistaSuscripciones.renderError("\nEste usuario no existe");
+        }else {
+            Observador temporal = (Observador) CUsuario.buscarUsuario(correoUsuario);
+            if(!observadores.equals(temporal)){
+                vistaSuscripciones.renderError("\nEste usuario no es un observador");
+            }else if(!observadores.get(observadores.indexOf(temporal)).equals(CAula.sacarPorID(idAula))){
+               vistaSuscripciones.renderError("\nEste usuario no esta suscrito a esa aula");
+            }else {
+                observadores.get(observadores.indexOf(temporal)).removeAula(CAula.sacarPorID(idAula));
+            }
+        }
 
     }
     public void requestSuscribirseAula(){
