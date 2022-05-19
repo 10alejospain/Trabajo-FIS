@@ -31,8 +31,6 @@ public class ControladorSuscripciones {
             }
             observadores.get(observadores.indexOf(temporal)).addAula(CAula.sacarPorID(idAula));
         }
-
-
     }
     public void desuscribirseAula(String idAula, String correoUsuario){
         if(!CAula.verSiExiste(idAula)){

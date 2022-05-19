@@ -53,7 +53,7 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(alumno);
-				vista.renderAlumno((IAlumno) alumno);
+				//vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
