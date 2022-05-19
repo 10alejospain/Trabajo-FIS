@@ -17,11 +17,6 @@ public class Alumno extends Usuario implements IUsuario{
     }
 
     @Override
-    public String getDNI() {
-        return super.getDni();
-    }
-
-    @Override
     public String toString(){
         return  super.toString() + "\nNumero Matricula: " + numeroMatricula + "\n";
     }
