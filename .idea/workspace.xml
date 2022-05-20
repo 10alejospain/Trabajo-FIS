@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Añadido incompleto Obervador y controller de subs">
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Todas las pruebas hechas, faltan añadir y los toString">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" afterDir="false" />
@@ -93,5 +93,9 @@
     <MESSAGE value="Comentarios sobre implementacion para corregir luego" />
     <MESSAGE value="Añadido incompleto Obervador y controller de subs" />
     <option name="LAST_COMMIT_MESSAGE" value="Añadido incompleto Obervador y controller de subs" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
