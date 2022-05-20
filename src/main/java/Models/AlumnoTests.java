@@ -1,5 +1,6 @@
 package Models;
 
+import Interfaces.IUsuario;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,16 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlumnoTests extends Usuario {
 
     private Alumno alumno;
-    private String nombre = "Pepe";
-    private String primerApellido = "Viyuela";
-    private String segundoApellido = "Castillo";
-    private String correo = "pepeviyuelamolon@alumnos.upm.es";
-    private String contrasena = "superSegUra144Hz";
-    private String dni= "81237142X";
-    private String numeroMatricula = "ba0006";
+    private final String nombre = "Pepe";
+    private final String primerApellido = "Viyuela";
+    private final String segundoApellido = "Castillo";
+    private final String correo = "pepeviyuelamolon@alumnos.upm.es";
+    private final String contrasena = "superSegUra144Hz";
+    private final String dni= "81237142X";
+    private final String numeroMatricula = "ba0006";
     @BeforeEach
     void setUp() {
-
         this.alumno = new Alumno(this.nombre,
                 this.primerApellido,
                 this.segundoApellido,
@@ -28,7 +28,6 @@ class AlumnoTests extends Usuario {
                 this.contrasena,
                 this.dni,
                 this.numeroMatricula);
-
     }
 
     @AfterEach
@@ -107,8 +106,8 @@ class AlumnoTests extends Usuario {
     }
 
     @Test
-    void testGetDni() {
-        assertEquals(this.dni, this.alumno.getDni());
+    void testGetDNI() {
+        assertEquals(this.dni, this.alumno.getDNI());
     }
 
     @Test
@@ -117,13 +116,9 @@ class AlumnoTests extends Usuario {
 
         this.alumno.setDni(nuevoDNI);
 
-        assertEquals(nuevoDNI, this.alumno.getDni());
+        assertEquals(nuevoDNI, this.alumno.getDNI());
     }
 
-    @Test
-    void testToString() {
-
-    }
 
     @Test
     void getNumeroMatricula() {
@@ -140,14 +135,30 @@ class AlumnoTests extends Usuario {
         assertEquals(nuevaMatricula, this.alumno.getNumeroMatricula());
     }
 
+    /**
+     * Este metodo comprueba el .toString() de la clase Usuario,
+     * casteando el Alumno actual que tenemos en pruebas a Usuario.
+     */
     @Test
-    void testGetDNI1() {
-        //assertEquals(this.dni, this.alumno.get());
+    void testToStringUsuario() {
+        String resultado = "Nombre: " + this.nombre + "\nApellidos: "+ this.primerApellido + " " + this.segundoApellido
+                + "\nCorreo: " + this.correo + "\nDNI"+ this.dni ;
+        Usuario alumnoAsUsuario = new Usuario(
+                this.alumno.getNombre(),
+                this.alumno.getPrimerApellido(),
+                this.alumno.getSegundoApellido(),
+                this.alumno.getCorreo(),
+                this.alumno.getContraseña(),
+                this.alumno.getDNI());
+        assertEquals(alumnoAsUsuario.toString(), resultado);
     }
 
     @Test
-    void testToStringUsuario() {
-        String resultado = "";
+    void testToStringAlumno() {
+        String resultado = "Nombre: " + this.nombre + "\nApellidos: "+ this.primerApellido + " " + this.segundoApellido
+                + "\nCorreo: " + this.correo + "\nDNI"+ this.dni + "\nNumero Matricula: " + numeroMatricula + "\n";
+
         assertEquals(this.alumno.toString(), resultado);
     }
+
 }

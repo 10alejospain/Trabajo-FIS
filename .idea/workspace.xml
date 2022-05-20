@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Todas las pruebas hechas, faltan añadir y los toString">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/AlumnoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/AlumnoTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,62 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RunManager" selected="JUnit.AlumnoTests">
+    <configuration name="AlumnoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabajo-FIS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlumnoTests.testToStringAlumno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabajo-FIS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTests" />
+      <option name="METHOD_NAME" value="testToStringAlumno" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlumnoTests.testToStringUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Trabajo-FIS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.AlumnoTests" />
+      <option name="METHOD_NAME" value="testToStringUsuario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AlumnoTests" />
+        <item itemvalue="JUnit.AlumnoTests.testToStringAlumno" />
+        <item itemvalue="JUnit.AlumnoTests.testToStringUsuario" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,6 +111,7 @@
       <workItem from="1652391473860" duration="130000" />
       <workItem from="1652993910679" duration="56000" />
       <workItem from="1652994055917" duration="1311000" />
+      <workItem from="1653048015468" duration="1820000" />
     </task>
     <task id="LOCAL-00001" summary="Comentarios sobre implementacion para corregir luego">
       <created>1652961241619</created>
@@ -82,7 +138,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
