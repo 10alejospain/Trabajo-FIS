@@ -1,5 +1,8 @@
 package Models;
 import Interfaces.*;
+
+import java.util.List;
+
 public class Usuario implements IUsuario{
 
   private String nombre;
@@ -8,6 +11,8 @@ public class Usuario implements IUsuario{
   private String correo;
   private String contraseña;
   private String dni;
+
+  private List<Aula> aulasSubscritas;
 
   public Usuario(){
 
@@ -66,18 +71,12 @@ public class Usuario implements IUsuario{
     this.contraseña = contraseña;
   }
 
-  public String getDni() {
-    return dni;
-  }
 
   public void setDni(String dni) {
     this.dni = dni;
   }
 
 
-  public String getNumero_Matricula() {
-    return null;
-  }
 
   @Override
   public String toString(){

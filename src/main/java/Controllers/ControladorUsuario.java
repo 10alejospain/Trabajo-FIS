@@ -8,10 +8,10 @@ package Controllers;//
 //  @ Author : 
 //
 //
-import Models.Alumno;
-import Models.PAS;
-import Models.PDI;
-import Models.Usuario;
+import Interfaces.IAlumno;
+import Interfaces.IPAS;
+import Interfaces.IPDI;
+import Models.*;
 import System.SistemaCentral;
 import Views.VistaUsuario;
 import servidor.Autenticacion;
@@ -23,14 +23,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-//El controlador del usuario necesita la funcionalidad de suscribirse y des-suscribirse a un aula.
 public class ControladorUsuario {
 
 	private SistemaCentral sistemaU;
 	final VistaUsuario vista;
 
 	private List<Usuario> usuarios = new ArrayList<Usuario>();//Usuarios registrados
-	private Usuario loggedUser;//Usuario loggeado
+
+ 	private Usuario loggedUser;//Usuario loggeado
 
 	public ControladorUsuario(){
 		vista = new VistaUsuario(this);
@@ -49,11 +49,11 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						null
+						map.get("matricula")
 				);
 
 				usuarios.add(alumno);
-				vista.renderAlumno(alumno);
+				//vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
@@ -63,8 +63,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						0,
-						0
+						Integer.parseInt(map.get("codigo personal")),
+						Integer.parseInt(map.get("anio"))
 				);
 
 				usuarios.add(pas);
@@ -78,8 +78,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						0,
-						null,
+						Integer.parseInt(map.get("Codigo")),
+						map.get("categoria"),
 						null
 				);
 
@@ -95,7 +95,7 @@ public class ControladorUsuario {
 	}
 	
 	public void requestDarAlta() {
-		vista.renderNewUsuario();// Pide al controlador que invoque la vista para crear un nuevo usr
+		vista.renderNewUsuario();
 	}
 	
 	public void eliminarUsuario(String correo) {
@@ -107,16 +107,15 @@ public class ControladorUsuario {
 	}
 	
 	public void requestEliminarUsuario() {
-		vista.renderUpdateUsuario();
+		vista.renderEliminarUsuario();
 	}
 
-	//Aunque no se use, he metido esto, por si acaso.
 	public void update(String correo, HashMap<String , String > map) {
 		usuarios.forEach((x) -> {
 			if(x.getCorreo().equals(correo)){
 				x.setCorreo(map.get("correo") != null ? map.get("correo") : x.getCorreo());
 				x.setContraseña(map.get("contraseña") != null ? map.get("contraseña") : x.getContraseña());
-				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDni());
+				x.setDni(map.get("dni") != null ? map.get("dni") : x.getDNI());
 				x.setNombre(map.get("nombre") != null ? map.get("nombre") : x.getNombre());
 				x.setPrimerApellido(map.get("primer apellido") != null ? map.get("primer apellido") : x.getPrimerApellido());
 				x.setSegundoApellido(map.get("segundo apellido") != null ? map.get("segundo apellido") : x.getPrimerApellido());
@@ -131,7 +130,17 @@ public class ControladorUsuario {
 	public void verUsuario(String correo) {
 		Autenticacion auth = new Autenticacion();
 		if (auth.existeCuentaUPM(correo)){
-			vista.renderUsuario(buscarUsuario(correo));
+			String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
+			Usuario usuario =buscarUsuario(correo);
+			if (rol == "ALUMNO"){
+				vista.renderAlumno((IAlumno) usuario);
+			}
+			else if (rol == "PAS"){
+				vista.renderPAS((IPAS) usuario);
+			}
+			else { //PDI
+				vista.renderPDI((IPDI) usuario);
+			}
 		}
 		else {
 			vista.renderError("El correo proporcionado no existe en la BD de la UPM");
@@ -148,10 +157,22 @@ public class ControladorUsuario {
 				return usuarios.get(x);
 			}
 		}
+		vista.renderError("No existe ningun usuario con este correo");
 		return null;
 	}
-	public void login(String correo){
 
+
+	public void login(String correo, String pass){
+		Usuario usr = buscarUsuario(correo);
+		if (usr != null){
+			String hashPass = Cifrado.cifrar(pass);
+			if (hashPass.equals(usr.getContraseña())){
+				this.loggedUser = usr;
+			}
+			else {
+				vista.renderError("Contraseña incorrecta");
+			}
+		}
 	}
 
 	public void logout(){

@@ -11,9 +11,11 @@ package Views;//
 
 import Controllers.ControladorAula;
 import Interfaces.*;
+import Models.Aula;
 
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -22,12 +24,16 @@ public class VistaAula {
 	public VistaAula( ControladorAula controladorA) {
 		this.controladorAula = controladorA;
 	}
-	
+
+	public VistaAula() {
+
+	}
+
 	public String renderAula(IAula aula) {
 		return "************************************************************" +
 				"\nVISTA AULA " + aula.getId() +
 				"\nCentro: " + aula.getCentro() +
-				"\nNumero del Centro: " + aula.getNumero_Centro() +
+				"\nNumero del Centro: " + aula.getNumeroCentro() +
 				"\nSuperficie del aula: " + aula.getSuperficie() + " m2" +
 				"\nAforo del aula: " + aula.getAforo() + " personas" +
 				"\nTipo de aula: " + aula.getTipo()+
@@ -81,7 +87,18 @@ public class VistaAula {
 		String idtemp = scanner.nextLine();
 		controladorAula.borrarAula(idtemp);
 	}
-	public void renderVerAula(){
-		controladorAula.requestVerAula();
+	public void renderIDAula(){
+		// Este metdo deberia implementar lo que hay en requestVerAula() ahora y pasarle por parametro el id del aula
+		Scanner scanner = new Scanner(System.in);
+		System.out.printf("!Que aula desea ver? Introduzca su ID: ");
+		String idAula = scanner.nextLine();//Se puede implementar o bien metiendo un metodo que muestre todas las aulas disponibles o bien pidiendo el id del aula
+		controladorAula.verAula(idAula);
 	}
+
+	public void renderAulas(List<Aula> aulas){
+		for(Aula aula : aulas){
+			renderAula(aula);
+		}
+	}
+
 }

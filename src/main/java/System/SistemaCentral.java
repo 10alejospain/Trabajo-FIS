@@ -1,6 +1,7 @@
 package System;
 
 import Controllers.ControladorAula;
+import Controllers.ControladorSuscripciones;
 import Controllers.ControladorUsuario;
 import Views.VistaSistema;
 import Interfaces.ISistemaCentral;
@@ -11,6 +12,7 @@ public class SistemaCentral implements ISistemaCentral{
 
 	private ControladorUsuario controladorUsuario = new ControladorUsuario();
 	private ControladorAula controladorAula = new ControladorAula();
+	private ControladorSuscripciones controladorSuscripciones = new ControladorSuscripciones(controladorUsuario, controladorAula);
 	private VistaSistema VistaSistema;
 	public SistemaCentral() {
 	
@@ -20,7 +22,7 @@ public class SistemaCentral implements ISistemaCentral{
 	
 	}
 	
-	public String procesarPeticion(String url, HashMap<String , String> map) {
+	public String procesarPeticion(String url) {
 		switch (url){
 			case "https://myupmclassroom/users/new":
 				controladorUsuario.requestDarAlta();
@@ -45,6 +47,9 @@ public class SistemaCentral implements ISistemaCentral{
 				break;
 			case "https://myupmclassroom/users/views":
 				controladorUsuario.requestVerUsuario();
+				break;
+			case "https://myupmclassroom/aulas/all":
+				controladorAula.requestVerAulas();
 				break;
 		}
 		return null;

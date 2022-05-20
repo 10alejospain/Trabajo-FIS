@@ -39,16 +39,7 @@ public class VistaUsuario {
 	}
 
 	public void renderUsuario(IUsuario usuario){
-		String rol = ObtencionDeRol.get_UPM_AccountRol(usuario.getCorreo()).toString();
-		if (rol == "ALUMNO"){
-			renderAlumno();
-		}
-		else if (rol == "PAS"){
-			renderPAS();
-		}
-		else { //PDI
-			renderPDI();
-		}
+
 	}
 	public void renderNewUsuario(){
 		Scanner scanner = new Scanner(System.in);
@@ -60,11 +51,29 @@ public class VistaUsuario {
 		System.out.printf("\nIntroduce tu segundo apellido: ");
 		datos.put("segundo apellido",scanner.nextLine());
 		System.out.printf("\nIntroduce tu correo: ");
-		datos.put("correo",scanner.nextLine());
+		String correo = scanner.nextLine();
+		datos.put("correo",correo);
 		System.out.printf("\nIntroduce tu constraseña: ");
 		datos.put("contraseña",scanner.nextLine());
-		System.out.printf("\nIntroduce tu dni: ");
+		System.out.printf("\nIntroduzca su dni: ");
 		datos.put("dni",scanner.nextLine());
+		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();// no se si esta logica deberia estar en la vista
+		if (rol == "ALUMNO"){
+			System.out.printf("\nIntroduzca tu numero de matricula: ");
+			datos.put("matricula",scanner.nextLine());
+		}
+		else if (rol == "PAS"){
+			System.out.printf("\nIntroduzca su codigo personal: ");
+			datos.put("codigo personal",scanner.nextLine());
+			System.out.printf("\nIntroduzca su año de incorporacion: ");
+			datos.put("anio",scanner.nextLine());
+		}
+		else { //PDI
+			System.out.printf("\n Introduzca su codigo de trabajador: ");
+			datos.put("codigo",scanner.nextLine());
+			System.out.printf("\n Introduzaca su categoria: ");
+			datos.put("categoria",scanner.nextLine());
+		}
 		Controlador.darAlta(datos);
 	}
 
@@ -98,9 +107,18 @@ public class VistaUsuario {
 	}
 	public void renderVerUsuario(){
 		Scanner scanner = new Scanner(System.in);
-		System.out.printf("¿Que usuario desea ver? Introduzca su correo: ");
+		System.out.printf("¿Que usuario desea ver? \nIntroduzca su correo: ");
 		String correo = scanner.nextLine();
 		Controlador.verUsuario(correo);
+	}
+	public void renderLogin(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.printf("Introduce tu correo: ");
+		String correo = scanner.nextLine();
+		System.out.printf("Introduce tu contraseña: ");
+		String pass = scanner.nextLine();
+
+		Controlador.login(correo, pass);
 	}
 	public void renderError(String error){
 		System.out.printf(error);

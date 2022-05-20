@@ -1,6 +1,6 @@
 package Models;
 import Interfaces.IUsuario;
-public class Alumno extends Usuario implements IUsuario{
+public class Alumno extends Observador implements IUsuario{
     private String numeroMatricula;
 
     public Alumno(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, String numeroMatricula) {
@@ -14,11 +14,6 @@ public class Alumno extends Usuario implements IUsuario{
 
     public void setNumeroMatricula(String numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
-    }
-
-    @Override
-    public String getDNI() {
-        return super.getDni();
     }
 
     @Override
