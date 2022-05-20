@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Todas las pruebas hechas, faltan añadir y los toString">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alejo/FIS/Trabajo-FIS/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alejo/Universidad/FIS/Trabajo-FIS/pom.xml&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -52,6 +54,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652391472653</updated>
       <workItem from="1652391473860" duration="130000" />
+      <workItem from="1652993910679" duration="56000" />
+      <workItem from="1652994055917" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="Comentarios sobre implementacion para corregir luego">
       <created>1652961241619</created>

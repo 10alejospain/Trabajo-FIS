@@ -1,6 +1,6 @@
 package Models;
 import Interfaces.IUsuario;
-public class Alumno extends Usuario implements IUsuario{
+public class Alumno extends Observador implements IUsuario{
     private String numeroMatricula;
 
     public Alumno(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, String numeroMatricula) {

@@ -6,8 +6,8 @@ public class Observador extends Usuario{
 
     private List<Aula> aulasSubscritas;
 
-    Observador(){
-        super();
+    Observador(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni){
+        super(nombre,primerApellido,segundoApellido,correo,contraseña,dni);
     }
 
 

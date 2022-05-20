@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-//El controlador del usuario necesita la funcionalidad de suscribirse y des-suscribirse a un aula.
 public class ControladorUsuario {
 
 	private SistemaCentral sistemaU;
@@ -54,7 +53,7 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(alumno);
-				vista.renderAlumno((IAlumno) alumno);
+				//vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
@@ -96,7 +95,7 @@ public class ControladorUsuario {
 	}
 	
 	public void requestDarAlta() {
-		vista.renderNewUsuario();// Pide al controlador que invoque la vista para crear un nuevo usr
+		vista.renderNewUsuario();
 	}
 	
 	public void eliminarUsuario(String correo) {
@@ -111,7 +110,6 @@ public class ControladorUsuario {
 		vista.renderEliminarUsuario();
 	}
 
-	//Aunque no se use, he metido esto, por si acaso.
 	public void update(String correo, HashMap<String , String > map) {
 		usuarios.forEach((x) -> {
 			if(x.getCorreo().equals(correo)){
@@ -164,8 +162,17 @@ public class ControladorUsuario {
 	}
 
 
-	public void login(String correo){
-
+	public void login(String correo, String pass){
+		Usuario usr = buscarUsuario(correo);
+		if (usr != null){
+			String hashPass = Cifrado.cifrar(pass);
+			if (hashPass.equals(usr.getContraseña())){
+				this.loggedUser = usr;
+			}
+			else {
+				vista.renderError("Contraseña incorrecta");
+			}
+		}
 	}
 
 	public void logout(){

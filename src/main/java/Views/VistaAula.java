@@ -24,7 +24,11 @@ public class VistaAula {
 	public VistaAula( ControladorAula controladorA) {
 		this.controladorAula = controladorA;
 	}
-	
+
+	public VistaAula() {
+
+	}
+
 	public String renderAula(IAula aula) {
 		return "************************************************************" +
 				"\nVISTA AULA " + aula.getId() +

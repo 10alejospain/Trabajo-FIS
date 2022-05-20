@@ -1,6 +1,7 @@
 package System;
 
 import Controllers.ControladorAula;
+import Controllers.ControladorSuscripciones;
 import Controllers.ControladorUsuario;
 import Views.VistaSistema;
 import Interfaces.ISistemaCentral;
@@ -11,6 +12,7 @@ public class SistemaCentral implements ISistemaCentral{
 
 	private ControladorUsuario controladorUsuario = new ControladorUsuario();
 	private ControladorAula controladorAula = new ControladorAula();
+	private ControladorSuscripciones controladorSuscripciones = new ControladorSuscripciones(controladorUsuario, controladorAula);
 	private VistaSistema VistaSistema;
 	public SistemaCentral() {
 	
