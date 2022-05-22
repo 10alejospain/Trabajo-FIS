@@ -96,11 +96,12 @@ public class ControladorUsuario {
 	}
 	
 	public void eliminarUsuario(String correo) {
-		usuarios.forEach((x) -> {
-			if (x.getCorreo().equals(correo)) {
-				usuarios.remove(x);
+		for(Usuario usuario : usuarios){
+			if(usuario.getCorreo().equals(correo)){
+				usuarios.remove(usuario);
+				break;
 			}
-		});
+		}
 	}
 	
 	public void requestEliminarUsuario() {

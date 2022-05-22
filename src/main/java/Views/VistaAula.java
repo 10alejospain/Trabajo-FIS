@@ -73,7 +73,7 @@ public class VistaAula {
 			datos.put(dato,valor);
 			System.out.printf("¿Desea cambiar algo mas? (Y/N): ");
 			String opcion = scanner.nextLine();
-			if(opcion == "N" || opcion == "n"){
+			if(opcion.equals("N") || opcion.equals("n")){
 				seguir=false;
 			}
 		}
