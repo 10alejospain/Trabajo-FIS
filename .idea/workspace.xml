@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Sync">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/System/SistemaCentral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaSistema.java" afterDir="false" />
-    </list>
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Sync" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +117,7 @@
       <workItem from="1652993910679" duration="56000" />
       <workItem from="1652994055917" duration="1311000" />
       <workItem from="1653048015468" duration="1869000" />
-      <workItem from="1653209145148" duration="5650000" />
+      <workItem from="1653209145148" duration="5955000" />
     </task>
     <task id="LOCAL-00001" summary="Comentarios sobre implementacion para corregir luego">
       <created>1652961241619</created>
@@ -155,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653212499941</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sync">
+      <created>1653216583732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653216583732</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
