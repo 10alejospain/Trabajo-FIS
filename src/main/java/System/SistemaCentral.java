@@ -52,8 +52,10 @@ public class SistemaCentral implements ISistemaCentral{
 				controladorAula.requestVerAulas();
 				break;
 			case"https://myupmclassroom/aulas/suscribe" :
+				controladorSuscripciones.requestSuscribirseAula();
 				break;
 			case "https://myupmclassroom/aulas/unsuscribe":
+				controladorSuscripciones.requestDesuscribirseAula();
 				break;
 		}
 		return null;

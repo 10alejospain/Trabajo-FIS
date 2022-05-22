@@ -24,7 +24,6 @@ public class VistaSuscripciones {
         vistaAula.renderAulas(list);
     }
     public void renderSuscribirseAula2(String email){
-
         Scanner scanner = new Scanner(System.in);
         System.out.printf("\nIntroduzca el ID de la sala a la que quieres suscribirse: ");
         String id = scanner.nextLine();
