@@ -91,14 +91,19 @@ public class VistaAula {
 		// Este metdo deberia implementar lo que hay en requestVerAula() ahora y pasarle por parametro el id del aula
 		Scanner scanner = new Scanner(System.in);
 		System.out.printf("!Que aula desea ver? Introduzca su ID: ");
-		String idAula = scanner.nextLine();//Se puede implementar o bien metiendo un metodo que muestre todas las aulas disponibles o bien pidiendo el id del aula
-		controladorAula.verAula(idAula);
+		String idAula = scanner.nextLine();
+		if(controladorAula.verSiExiste(idAula)) {//Se puede implementar o bien metiendo un metodo que muestre todas las aulas disponibles o bien pidiendo el id del aula
+			controladorAula.verAula(idAula);
+		}else System.out.printf("\nNo existe un aula con este id: "+ idAula);
 	}
 
 	public void renderAulas(List<Aula> aulas){
-		for(Aula aula : aulas){
-			renderAula(aula);
+		if(!aulas.isEmpty()) {
+			for (Aula aula : aulas) {
+				renderAula(aula);
+			}
 		}
+		System.out.printf("\nNo hay aulas guardadas");
 	}
 
 }

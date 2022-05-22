@@ -32,6 +32,7 @@ public class ControladorAula {
 				Integer.parseInt(map.get("aforo")),
 				map.get("tipo")
 		);
+		vistaAula.renderAula(aula);
 		aulas.add(aula);
 	}
 
@@ -85,7 +86,7 @@ public class ControladorAula {
 
 	public Boolean verSiExiste(String id){
 		for(Aula aula : aulas){
-			if(aula.getId()==id){
+			if(aula.getId().equals(id)){
 				return true;
 			}
 		}
