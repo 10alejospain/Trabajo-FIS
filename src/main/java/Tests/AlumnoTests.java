@@ -1,6 +1,8 @@
-package Models;
+package Tests;
 
 import Interfaces.IUsuario;
+import Models.Alumno;
+import Models.Usuario;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

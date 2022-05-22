@@ -30,7 +30,11 @@ public class VistaSistema {
 					           "\n******************** My UPM Classroom **********************" +
 					           "\n************************************************************" +
 					           "\nMenu de Acciones: ");
-			System.out.print("1.- Anadir usuario.\n2.- Ver un usuario.\n3.- Modificar un usuario.\n4.- Borrar un usuario.\n5.- Anadir aula.\n6.- Ver Aula.\n7.- Modificar un aula.\n8.- Borrar un aula.\n9. - Ver todas las aulas\n0.- EXIT.\n");
+			System.out.print("1.- Anadir usuario.\n2.- Ver un usuario.\n3.- Modificar un usuario." +
+					"\n4.- Borrar un usuario.\n5.- Anadir aula.\n6.- Ver Aula.\n7.- Modificar un aula." +
+					"\n8.- Borrar un aula.\n9. - Ver todas las aulas" + "\n10. - Suscribirse a un Aula" +
+					"\n11. - Desuscribirse de un Aula" +
+					"\n0.- EXIT.\n");
 			switch (scanner.nextLine()) {
 				case "0":
 					exit = true;
@@ -61,6 +65,12 @@ public class VistaSistema {
 					break;
 				case "9":
 					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/all");
+					break;
+				case "10":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/suscribe");
+					break;
+				case "11":
+					sistemaCentral.procesarPeticion("https://myupmclassroom/aulas/unsuscribe");
 					break;
 				default:
 					System.out.println("\nPor favor, seleccione una de las opciones.\n");
