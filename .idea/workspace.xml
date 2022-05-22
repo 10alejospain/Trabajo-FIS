@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Sync">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ControladorAula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/VistaAula.java" afterDir="false" />
-    </list>
+    <list default="true" id="d37b1ebb-68f3-4549-bf79-322c4af1bf72" name="Changes" comment="Sync" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +41,7 @@
     "last_opened_file_path": "/home/alejo/Universidad/FIS/Trabajo-FIS/pom.xml",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -55,7 +51,7 @@
       </method>
     </configuration>
     <configuration name="AlumnoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
+      <module name="TrabajoFIS" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Tests.*" />
@@ -69,44 +65,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlumnoTests.testToStringAlumno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AlumnoTests" />
-      <option name="METHOD_NAME" value="testToStringAlumno" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlumnoTests.testToStringUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Trabajo-FIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AlumnoTests" />
-      <option name="METHOD_NAME" value="testToStringUsuario" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AlumnoTests" />
-        <item itemvalue="JUnit.AlumnoTests.testToStringAlumno" />
-        <item itemvalue="JUnit.AlumnoTests.testToStringUsuario" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +83,7 @@
       <workItem from="1652993910679" duration="56000" />
       <workItem from="1652994055917" duration="1311000" />
       <workItem from="1653048015468" duration="1869000" />
-      <workItem from="1653209145148" duration="9646000" />
+      <workItem from="1653209145148" duration="5955000" />
     </task>
     <task id="LOCAL-00001" summary="Comentarios sobre implementacion para corregir luego">
       <created>1652961241619</created>
@@ -159,14 +120,7 @@
       <option name="project" value="LOCAL" />
       <updated>1653216583732</updated>
     </task>
-    <task id="LOCAL-00006" summary="Sync">
-      <created>1653216994202</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1653216994202</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,19 +131,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -199,19 +141,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Comentarios sobre implementacion para corregir luego" />
     <MESSAGE value="Añadido incompleto Obervador y controller de subs" />
-    <MESSAGE value="Pruebas unitarias" />
-    <MESSAGE value="Sync" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sync" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="hashPass" language="JAVA" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido incompleto Obervador y controller de subs" />
   </component>
 </project>

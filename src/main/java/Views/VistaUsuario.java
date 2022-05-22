@@ -60,23 +60,7 @@ public class VistaUsuario {
 		datos.put("contraseña",scanner.nextLine());
 		System.out.printf("\nIntroduzca su dni: ");
 		datos.put("dni",scanner.nextLine());
-		String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();// no se si esta logica deberia estar en la vista
-		if (rol == "ALUMNO"){
-			System.out.printf("\nIntroduzca tu numero de matricula: ");
-			datos.put("matricula",scanner.nextLine());
-		}
-		else if (rol == "PAS"){
-			System.out.printf("\nIntroduzca su codigo personal: ");
-			datos.put("codigo personal",scanner.nextLine());
-			System.out.printf("\nIntroduzca su año de incorporacion: ");
-			datos.put("anio",scanner.nextLine());
-		}
-		else { //PDI
-			System.out.printf("\n Introduzca su codigo de trabajador: ");
-			datos.put("codigo",scanner.nextLine());
-			System.out.printf("\n Introduzaca su categoria: ");
-			datos.put("categoria",scanner.nextLine());
-		}
+
 		Controlador.darAlta(datos);
 	}
 

@@ -15,11 +15,7 @@ public class SistemaCentral implements ISistemaCentral{
 	private ControladorSuscripciones controladorSuscripciones = new ControladorSuscripciones(controladorUsuario, controladorAula);
 	private VistaSistema VistaSistema;
 	public SistemaCentral() {
-	
-	}
-	
-	public void iniciar() {
-	
+
 	}
 	
 	public String procesarPeticion(String url) {
@@ -60,5 +56,6 @@ public class SistemaCentral implements ISistemaCentral{
 		}
 		return null;
 	}
+
 
 }
