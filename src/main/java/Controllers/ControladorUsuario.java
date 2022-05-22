@@ -133,13 +133,13 @@ public class ControladorUsuario {
 			String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
 			Usuario usuario =buscarUsuario(correo);
 			if (rol == "ALUMNO"){
-				vista.renderAlumno((IAlumno) usuario);
+				vista.renderAlumno((Alumno) usuario);
 			}
 			else if (rol == "PAS"){
-				vista.renderPAS((IPAS) usuario);
+				vista.renderPAS((PAS) usuario);
 			}
 			else { //PDI
-				vista.renderPDI((IPDI) usuario);
+				vista.renderPDI((PDI) usuario);
 			}
 		}
 		else {
@@ -153,7 +153,7 @@ public class ControladorUsuario {
 	
 	public Usuario buscarUsuario(String correo) {
 		for (int x = 0; x < usuarios.size(); x++) {
-			if(usuarios.get(x).getCorreo() == correo){
+			if(usuarios.get(x).getCorreo().equals(correo)){
 				return usuarios.get(x);
 			}
 		}
