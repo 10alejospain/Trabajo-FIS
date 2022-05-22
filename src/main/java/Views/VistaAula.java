@@ -30,7 +30,7 @@ public class VistaAula {
 	}
 
 	public void renderAula(IAula aula) {
-		System.out.printf("************************************************************" +
+		System.out.printf("\n************************************************************" +
 				"\nVISTA AULA " + aula.getId() +
 				"\nCentro: " + aula.getCentro() +
 				"\nNumero del Centro: " + aula.getNumeroCentro() +
@@ -106,4 +106,7 @@ public class VistaAula {
 		}
 	}
 
+	public void renderError(String error) {
+		System.out.println(error);
+	}
 }

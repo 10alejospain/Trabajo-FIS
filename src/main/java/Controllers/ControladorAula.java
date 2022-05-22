@@ -65,13 +65,18 @@ public class ControladorAula {
 		vistaAula.renderIDAula();
 	}
 	public void verAula(String  IDAula){
+		boolean founded = false;
 		for(Aula aula: aulas){
 			if (aula.getId().equals(IDAula)){
 				vistaAula.renderAula(aula);
+				founded = true;
 				break;
 			}
 		}
-		System.out.printf("\nNo existe un aula con ese id: "+ IDAula);
+		if(!founded)
+			vistaAula.renderError("************************************************************" +
+					"\n No existe el aula con el ID: " + IDAula + "" +
+					"\n************************************************************");
 	}
 
 	public void requestVerAulas(){
