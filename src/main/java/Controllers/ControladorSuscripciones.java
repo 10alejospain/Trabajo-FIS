@@ -60,11 +60,12 @@ public class ControladorSuscripciones {
         vistaSuscripciones.renderDesuscribirse1();
     }
     public void desuscribirse(String email){
+        vistaSuscripciones.verAulasSuscritas(findEmail(email).getAulasSubscritas());
         vistaSuscripciones.renderDesuscribirseAula2(email);
     }
     public Observador findEmail(String email){
         for(Observador obv : observadores){
-            if (obv.getCorreo() == email){
+            if (obv.getCorreo().equals(email)){
                 return obv;
             }
         }

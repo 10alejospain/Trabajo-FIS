@@ -64,10 +64,12 @@ public class ControladorAula {
 	}
 	public void verAula(String  IDAula){
 		for(Aula aula: aulas){
-			if (aula.getId()==IDAula){
+			if (aula.getId().equals(IDAula)){
 				vistaAula.renderAula(aula);
+				break;
 			}
 		}
+		System.out.printf("\nNo existe un aula con ese id: "+ IDAula);
 	}
 
 	public void requestVerAulas(){
@@ -95,7 +97,7 @@ public class ControladorAula {
 
 	public Aula sacarPorID(String id){
 		for (Aula aula : aulas){
-			if (aula.getId()==id){
+			if (aula.getId().equals(id)){
 				return aula;
 			}
 		}
