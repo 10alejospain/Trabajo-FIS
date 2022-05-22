@@ -22,6 +22,7 @@ import utilidades.Cifrado;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class ControladorUsuario {
 
@@ -49,7 +50,7 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						map.get("matricula")
+						null
 				);
 
 				usuarios.add(alumno);
@@ -62,8 +63,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						Integer.parseInt(map.get("codigo personal")),
-						Integer.parseInt(map.get("anio"))
+						0,
+						0
 				);
 
 				usuarios.add(pas);
@@ -76,8 +77,8 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						map.get("Codigo"),
-						map.get("categoria"),
+						null,
+						null,
 						null
 				);
 				usuarios.add(pdi);
@@ -128,10 +129,10 @@ public class ControladorUsuario {
 		if (auth.existeCuentaUPM(correo)){
 			String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
 			Usuario usuario =buscarUsuario(correo);
-			if (rol == "ALUMNO"){
+			if (Objects.equals(rol, "ALUMNO")){
 				vista.renderAlumno((Alumno) usuario);
 			}
-			else if (rol == "PAS"){
+			else if (Objects.equals(rol, "PAS")){
 				vista.renderPAS((PAS) usuario);
 			}
 			else { //PDI

@@ -88,7 +88,6 @@ public class VistaAula {
 		controladorAula.borrarAula(idtemp);
 	}
 	public void renderIDAula(){
-		// Este metdo deberia implementar lo que hay en requestVerAula() ahora y pasarle por parametro el id del aula
 		Scanner scanner = new Scanner(System.in);
 		System.out.printf("!Que aula desea ver? Introduzca su ID: ");
 		String idAula = scanner.nextLine();
