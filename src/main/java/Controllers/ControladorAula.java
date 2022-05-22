@@ -14,6 +14,7 @@ import Interfaces.IAula;
 import Models.Aula;
 import System.SistemaCentral;
 import Views.*;
+import com.beust.ah.A;
 
 import java.util.*;
 
@@ -38,11 +39,12 @@ public class ControladorAula {
 
 	//Parametro cambiado, dado a que el id es un int no un string.
 	public void borrarAula(String id) {
-		aulas.forEach((x) -> {
-			if(Objects.equals(x.getId(), id)) {
-				aulas.remove(x);
+		for (Aula aula : aulas){
+			if (aula.equals(id)){
+				aulas.remove(aula);
+				break;
 			}
-		});
+		}
 	}
 
 	//Parametro cambiado, dado a que el id es un int no un string.
