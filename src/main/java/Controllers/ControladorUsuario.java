@@ -53,7 +53,6 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(alumno);
-				//vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
@@ -68,7 +67,6 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(pas);
-				vista.renderPAS(pas);
 			}
 			else { //PDI
 				PDI pdi = new PDI(
@@ -78,13 +76,11 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						Integer.parseInt(map.get("Codigo")),
+						map.get("Codigo"),
 						map.get("categoria"),
 						null
 				);
-
 				usuarios.add(pdi);
-				vista.renderPDI(pdi);
 			}
 		}
 		else {
@@ -133,13 +129,13 @@ public class ControladorUsuario {
 			String rol = ObtencionDeRol.get_UPM_AccountRol(correo).toString();
 			Usuario usuario =buscarUsuario(correo);
 			if (rol == "ALUMNO"){
-				vista.renderAlumno((IAlumno) usuario);
+				vista.renderAlumno((Alumno) usuario);
 			}
 			else if (rol == "PAS"){
-				vista.renderPAS((IPAS) usuario);
+				vista.renderPAS((PAS) usuario);
 			}
 			else { //PDI
-				vista.renderPDI((IPDI) usuario);
+				vista.renderPDI((PDI) usuario);
 			}
 		}
 		else {
@@ -153,7 +149,7 @@ public class ControladorUsuario {
 	
 	public Usuario buscarUsuario(String correo) {
 		for (int x = 0; x < usuarios.size(); x++) {
-			if(usuarios.get(x).getCorreo() == correo){
+			if(usuarios.get(x).getCorreo().equals(correo)){
 				return usuarios.get(x);
 			}
 		}

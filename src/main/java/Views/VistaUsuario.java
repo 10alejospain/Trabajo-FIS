@@ -14,6 +14,9 @@ import Interfaces.IAlumno;
 import Interfaces.IPAS;
 import Interfaces.IPDI;
 import Interfaces.IUsuario;
+import Models.Alumno;
+import Models.PAS;
+import Models.PDI;
 import servidor.ObtencionDeRol;
 
 import java.util.HashMap;
@@ -26,15 +29,15 @@ public class VistaUsuario {
 		this.Controlador = controladorUsuario;
 	}
 	
-	public void renderAlumno(IAlumno alumno) {
+	public void renderAlumno(Alumno alumno) {
 		System.out.printf(alumno.toString());
 	}
 	
-	public void renderPDI(IPDI pdi) {
+	public void renderPDI(PDI pdi) {
 		System.out.printf(pdi.toString());
 	}
 	
-	public void renderPAS(IPAS pas) {
+	public void renderPAS(PAS pas) {
 		System.out.printf(pas.toString());
 	}
 
@@ -98,7 +101,7 @@ public class VistaUsuario {
 			datos.put(dato,valor);
 			System.out.printf("¿Desea cambiar algo mas? (Y/N): ");
 			String opcion = scanner.nextLine();
-			if(opcion == "N"){
+			if(opcion.equals("N")){
 				seguir=false;
 			}
 		}

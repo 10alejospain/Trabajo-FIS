@@ -29,15 +29,15 @@ public class VistaAula {
 
 	}
 
-	public String renderAula(IAula aula) {
-		return "************************************************************" +
+	public void renderAula(IAula aula) {
+		System.out.printf("************************************************************" +
 				"\nVISTA AULA " + aula.getId() +
 				"\nCentro: " + aula.getCentro() +
 				"\nNumero del Centro: " + aula.getNumeroCentro() +
 				"\nSuperficie del aula: " + aula.getSuperficie() + " m2" +
 				"\nAforo del aula: " + aula.getAforo() + " personas" +
 				"\nTipo de aula: " + aula.getTipo()+
-				"\n************************************************************";
+				"\n************************************************************");
 	}
 
 	public void renderNewAula(){
@@ -92,9 +92,7 @@ public class VistaAula {
 		Scanner scanner = new Scanner(System.in);
 		System.out.printf("!Que aula desea ver? Introduzca su ID: ");
 		String idAula = scanner.nextLine();
-		if(controladorAula.verSiExiste(idAula)) {//Se puede implementar o bien metiendo un metodo que muestre todas las aulas disponibles o bien pidiendo el id del aula
-			controladorAula.verAula(idAula);
-		}else System.out.printf("\nNo existe un aula con este id: "+ idAula);
+		controladorAula.verAula(idAula);
 	}
 
 	public void renderAulas(List<Aula> aulas){
@@ -103,7 +101,9 @@ public class VistaAula {
 				renderAula(aula);
 			}
 		}
-		System.out.printf("\nNo hay aulas guardadas");
+		else {
+			System.out.printf("\nNo hay aulas guardadas");
+		}
 	}
 
 }

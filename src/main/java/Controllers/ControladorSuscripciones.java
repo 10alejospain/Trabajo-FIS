@@ -30,6 +30,7 @@ public class ControladorSuscripciones {
                 observadores.add(temporal);
             }
             observadores.get(observadores.indexOf(temporal)).addAula(CAula.sacarPorID(idAula));
+            vistaSuscripciones.renderError("Te has suscrito de manera correcta a la clase "+idAula);
         }
     }
     public void desuscribirseAula(String idAula, String correoUsuario){
@@ -53,7 +54,6 @@ public class ControladorSuscripciones {
         vistaSuscripciones.renderSuscribirseAula1();
     }
     public void suscribirse(String email){
-        vistaSuscripciones.verAulasSuscritas(findEmail(email).getAulasSubscritas());
         vistaSuscripciones.renderSuscribirseAula2(email);
     }
     public void requestDesuscribirseAula(){
@@ -65,7 +65,7 @@ public class ControladorSuscripciones {
     }
     public Observador findEmail(String email){
         for(Observador obv : observadores){
-            if (obv.getCorreo() == email){
+            if (obv.getCorreo().equals(email)){
                 return obv;
             }
         }

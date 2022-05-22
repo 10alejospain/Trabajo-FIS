@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Observador extends Usuario{
@@ -8,6 +9,7 @@ public class Observador extends Usuario{
 
     Observador(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni){
         super(nombre,primerApellido,segundoApellido,correo,contraseña,dni);
+        aulasSubscritas = new ArrayList<>();
     }
 
 
