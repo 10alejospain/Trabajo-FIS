@@ -2,22 +2,22 @@ package Models;
 
 import Interfaces.IPDI;
 public class PDI extends Observador implements IPDI{
-  private int codigoTrabajador;
+  private String codigoTrabajador;
   private String categoria;
   private String horarioTrabajo;
 
-    public PDI(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, int codigoTrabajador, String categoria, String horarioTrabajo) {
+    public PDI(String nombre, String primerApellido, String segundoApellido, String correo, String contraseña, String dni, String codigoTrabajador, String categoria, String horarioTrabajo) {
         super(nombre,primerApellido,segundoApellido,correo,contraseña,dni);
         this.codigoTrabajador = codigoTrabajador;
         this.categoria = categoria;
         this.horarioTrabajo = horarioTrabajo;
     }
 
-    public int getCodigoTrabajador() {
+    public String getCodigoTrabajador() {
         return codigoTrabajador;
     }
 
-    public void setCodigoTrabajador(int codigoTrabajador) {
+    public void setCodigoTrabajador(String codigoTrabajador) {
         this.codigoTrabajador = codigoTrabajador;
     }
 

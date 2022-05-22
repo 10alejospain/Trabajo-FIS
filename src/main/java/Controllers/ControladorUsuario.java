@@ -53,7 +53,6 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(alumno);
-				//vista.renderAlumno((IAlumno) alumno);
 			}
 			else if (rol == "PAS"){
 				PAS pas = new PAS(
@@ -68,7 +67,6 @@ public class ControladorUsuario {
 				);
 
 				usuarios.add(pas);
-				vista.renderPAS(pas);
 			}
 			else { //PDI
 				PDI pdi = new PDI(
@@ -78,13 +76,11 @@ public class ControladorUsuario {
 						map.get("correo"),
 						Cifrado.cifrar(map.get("contraseña")),
 						map.get("dni"),
-						Integer.parseInt(map.get("Codigo")),
+						map.get("Codigo"),
 						map.get("categoria"),
 						null
 				);
-
 				usuarios.add(pdi);
-				vista.renderPDI(pdi);
 			}
 		}
 		else {

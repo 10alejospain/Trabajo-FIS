@@ -13,7 +13,7 @@ package Interfaces;//
 
 
 public interface IPDI {
-	public int getCodigoTrabajador();
+	public String getCodigoTrabajador();
 	
 	public String getCategoria();
 	
