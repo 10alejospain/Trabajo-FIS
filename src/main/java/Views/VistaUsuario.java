@@ -101,7 +101,7 @@ public class VistaUsuario {
 			datos.put(dato,valor);
 			System.out.printf("¿Desea cambiar algo mas? (Y/N): ");
 			String opcion = scanner.nextLine();
-			if(opcion == "N"){
+			if(opcion.equals("N")){
 				seguir=false;
 			}
 		}
